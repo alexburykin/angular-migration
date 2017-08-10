@@ -19,7 +19,7 @@
       "testTsconfig": "tsconfig.spec.json",
       "prefix": "app",
       "styles": [
-        "styles.sass"
+        "sass/app.sass"
       ],
       "scripts": [],
       "environmentSource": "environments/environment.ts",
@@ -55,6 +55,17 @@
   },
   "defaults": {
     "styleExt": "sass",
-    "component": {}
+    "component": {
+      "spec": false
+    },
+    "directive": {
+      "spec": false
+    },
+    "pipe": {
+      "spec": false
+    },
+    "service": {
+      "spec": false
+    }
   }
 }

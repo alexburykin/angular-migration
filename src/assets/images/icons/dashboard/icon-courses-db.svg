@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="18px" height="30px" viewBox="0 0 18 30" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: sketchtool 40.1 (33804) - http://www.bohemiancoding.com/sketch -->
+    <title>CB7303DD-44EC-4C08-B9E4-3DE75F1DE683</title>
+    <desc>Created with sketchtool.</desc>
+    <defs></defs>
+    <g id="Material" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="12.-Students" transform="translate(-28.000000, -215.000000)" stroke-width="2" stroke="#B0C1CA">
+            <g id="sidebar">
+                <g id="2" transform="translate(0.000000, 170.000000)">
+                    <g id="courses" transform="translate(29.000000, 46.000000)">
+                        <ellipse id="Oval" cx="7.72413793" cy="20.2758621" rx="7.72413793" ry="7.72413793"></ellipse>
+                        <path d="M8,18.2860365 L8,21.8272186" id="Path-3" stroke-linecap="round"></path>
+                        <path d="M3.86206897,13.5209077 L3.86206897,3.85840261 C3.86206897,1.72746569 5.59551629,0 7.72413793,0 C9.85709972,0 11.5862069,1.72714656 11.5862069,3.85840261" id="Rectangle" stroke-linecap="round"></path>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

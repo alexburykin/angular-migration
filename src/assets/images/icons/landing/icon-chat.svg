@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="18px" height="17px" viewBox="0 0 18 17" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: sketchtool 40.1 (33804) - http://www.bohemiancoding.com/sketch -->
+    <title>C86AC9D5-6F6A-48D3-87CB-A9FEF44D5D4D</title>
+    <desc>Created with sketchtool.</desc>
+    <defs></defs>
+    <g id="Landing" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g transform="translate(-912.000000, -5.000000)" id="first-screen" stroke="#FFFFFF">
+            <g transform="translate(0.000000, -1.000000)">
+                <g id="top">
+                    <g id="chat" transform="translate(913.000000, 7.000000)">
+                        <path d="M11.7755847,15.3703321 C12.0798587,15.6796157 12.6060606,15.4641682 12.6060606,15.030303 L12.6060606,11.6363636 L14.0646705,11.6363636 C14.8659573,11.6363636 15.5151515,10.9877246 15.5151515,10.1861067 L15.5151515,1.45025697 C15.5151515,0.650074478 14.8635363,0 14.0646705,0 L1.45048098,0 C0.649194167,0 0,0.648639069 0,1.45025697 L0,10.1861067 C0,10.9862892 0.65161519,11.6363636 1.45048098,11.6363636 L8.3052511,11.6363636 L11.7755847,15.3703321 Z" id="Rectangle-726"></path>
+                        <path d="M4,5 L12,5" id="Path-5" stroke-linecap="round" stroke-linejoin="round"></path>
+                        <path d="M6,7 L10,7" id="Path-5-Copy" stroke-linecap="round" stroke-linejoin="round"></path>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

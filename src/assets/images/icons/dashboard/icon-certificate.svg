@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="20px" height="22px" viewBox="0 0 20 22" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: sketchtool 40.1 (33804) - http://www.bohemiancoding.com/sketch -->
+    <title>2D38605A-EF97-49E2-96FE-EAC7233CC8DF</title>
+    <desc>Created with sketchtool.</desc>
+    <defs>
+        <polyline id="path-1" points="11.1111111 14.4444444 11.1111111 18.8888889 8.82298495 18 6.66666667 18.8888889 6.66666667 14.4444444"></polyline>
+        <mask id="mask-2" maskContentUnits="userSpaceOnUse" maskUnits="objectBoundingBox" x="0" y="0" width="4.44444444" height="4.44444444" fill="white">
+            <use xlink:href="#path-1"></use>
+        </mask>
+    </defs>
+    <g id="Material" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="round">
+        <g id="3.-Courses" transform="translate(-950.000000, -186.000000)" stroke="#B0C1CA">
+            <g id="Courses" transform="translate(116.000000, 88.000000)">
+                <g id="1-copy" transform="translate(0.000000, 83.000000)">
+                    <g id="certificate" transform="translate(835.000000, 16.000000)">
+                        <rect id="Rectangle-18" x="0" y="0" width="17.7777778" height="20" rx="2"></rect>
+                        <path d="M3.33333333,3.33333333 L14.4444444,3.33333333" id="Path-19"></path>
+                        <path d="M4.44444444,5.55555556 L13.3333333,5.55555556" id="Path-19-Copy"></path>
+                        <path d="M5.55555556,7.77777778 L12.2222222,7.77777778" id="Path-19-Copy-2"></path>
+                        <ellipse id="Oval-4" cx="8.88888889" cy="12.2222222" rx="2.22222222" ry="2.22222222"></ellipse>
+                        <use id="Rectangle-5" mask="url(#mask-2)" stroke-width="2" xlink:href="#path-1"></use>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

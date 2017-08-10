@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="12px" height="20px" viewBox="0 0 12 20" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: sketchtool 40.1 (33804) - http://www.bohemiancoding.com/sketch -->
+    <title>565F81EA-F5DC-4BEF-8355-67B3A062ADE9</title>
+    <desc>Created with sketchtool.</desc>
+    <defs></defs>
+    <g id="Dashboard" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="2.-Cources" transform="translate(-773.000000, -294.000000)" stroke="#50C3E3" stroke-width="2">
+            <g id="Listing" transform="translate(201.000000, 91.000000)">
+                <g id="4" transform="translate(412.000000, 186.000000)">
+                    <g id="lock" transform="translate(161.000000, 18.000000)">
+                        <ellipse id="Oval" cx="4.77547893" cy="12.5356322" rx="4.77547893" ry="4.77547893"></ellipse>
+                        <path d="M4.64444444,11.3054146 L4.64444444,13.4947645" id="Path-3" stroke-linecap="round"></path>
+                        <path d="M2.38773946,8.35935486 L2.38773946,2.38547273 C2.38773946,1.06801252 3.45945015,0 4.77547893,0 C6.09419102,0 7.16321839,1.06781522 7.16321839,2.38547273 L7.16321839,8.35935486" id="Rectangle"></path>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
