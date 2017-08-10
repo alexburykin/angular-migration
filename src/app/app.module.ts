@@ -5,6 +5,7 @@ import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app.routing';
 import { LandingModule } from './landing/landing.module';
 import { SharedModule } from './_shared/shared.module';
+import { DOMAIN } from '../config';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,12 @@ import { SharedModule } from './_shared/shared.module';
     LandingModule,
     AppRoutingModule
   ],
-  providers: [],
+  providers: [
+    {
+      provide: 'DOMAIN',
+      useValue: DOMAIN
+    },
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

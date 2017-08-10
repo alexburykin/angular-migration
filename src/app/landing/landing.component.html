@@ -1,5 +1,5 @@
 
-<div ng-show="$ctrl.content" class="outer">
+<div *ngIf="page" class="outer">
 
   <div class="top-line clearfix">
     <div class="right">
@@ -30,102 +30,105 @@
           <!--</div>-->
         <!--</li>-->
 
-        <li ng-if="!$ctrl.user"><a ui-sref="db.login">EINLOGGEN</a></li>
-        <li ng-if="!$ctrl.user"><a ui-sref="db.registration">REGISTRIEREN</a></li>
+        <li *ngIf="!user"><a ui-sref="db.login">EINLOGGEN</a></li>
+        <li *ngIf="!user"><a ui-sref="db.registration">REGISTRIEREN</a></li>
       </ul>
     </div>
   </div>
 
-  <!--<div class="menu">-->
-    <!--<div class="container">-->
-      <!--<div class="logo cup" ui-sref="academy.index()">-->
-        <!--<img ng-src="img/desktop-logo@2x.png" alt="">-->
-      <!--</div>-->
-      <!--<ul class="main-nav" ng-class="{'open' : isNavOpen}">-->
-        <!--<li ui-sref="academy.index({s: 'about'})"-->
-            <!--du-smooth-scroll="about">Home</li>-->
-        <!--<li ui-sref="academy.index({s: 'courses'})"-->
-            <!--du-smooth-scroll="courses">Kurse</li>-->
-        <!--<li ui-sref="academy.index({s: 'mentors'})"-->
-            <!--du-smooth-scroll="mentors">Mentoren</li>-->
-        <!--<li ui-sref="academy.index({s: 'events'})"-->
-            <!--du-smooth-scroll="events">Events</li>-->
-        <!--<li du-smooth-scroll="promo-app">App</li>-->
-        <!--<li ui-sref="academy.prices">Preise</li>-->
-        <!--<li ng-click="$ctrl.showSignupModal()">Jetzt Mitglied werden</li>-->
-      <!--</ul>-->
+  <div class="menu">
+    <div class="container">
+      <div class="logo cup" ui-sref="academy.index()">
+        <img src="../../assets/images/desktop-logo@2x.png" alt="">
+      </div>
+      <ul class="main-nav" [ngClass]="{'open' : isNavOpen}">
+        <li ui-sref="academy.index({s: 'about'})"
+            du-smooth-scroll="about">Home</li>
+        <li ui-sref="academy.index({s: 'courses'})"
+            du-smooth-scroll="courses">Kurse</li>
+        <li ui-sref="academy.index({s: 'mentors'})"
+            du-smooth-scroll="mentors">Mentoren</li>
+        <li ui-sref="academy.index({s: 'events'})"
+            du-smooth-scroll="events">Events</li>
 
-      <!--<div class="text-right">-->
-        <!--<li class="trial-link" ng-click="$ctrl.showSignupModal()">Jetzt Mitglied werden</li>-->
-      <!--</div>-->
+        <li pageScroll href="#promoApp">App</li>
 
-      <!--<div ng-click="isNavOpen = !isNavOpen"  class="nav-toggle" ng-class="{'active' : isNavOpen}">-->
-        <!--<span></span>-->
-      <!--</div>-->
-    <!--</div>-->
-  <!--</div>-->
+        <li ui-sref="academy.prices">Preise</li>
+        <li ng-click="$ctrl.showSignupModal()">Jetzt Mitglied werden</li>
+      </ul>
+
+      <div class="text-right">
+        <li class="trial-link" ng-click="$ctrl.showSignupModal()">Jetzt Mitglied werden</li>
+      </div>
+
+      <div (click)="isNavOpen = !isNavOpen"  class="nav-toggle" [ngClass]="{'active' : isNavOpen}">
+        <span></span>
+      </div>
+    </div>
+  </div>
 
 
   <router-outlet></router-outlet>
 
+  <div class="some-jopa"></div>
 
-  <!--<div id="promo-app" class="promo-app">-->
-    <!--<div class="container clearfix">-->
+  <div id="promoApp" class="promo-app">
+    <div class="container clearfix">
 
-      <!--<div class="left">-->
-        <!--<p class="promo-app__title">APP</p>-->
-        <!--<p class="promo-app__text safe-html">-->
-          <!--WERDE JETZT MITGLIED UND NIMM DEINE FINANZIELLE SITUATION SELBST IN DIE HAND. NUR DU KANNST DICH GROSS MACHEN UND DABEI WOLLEN WIR DIR HELFEN. FREIHEIT UND WOHLSTAND STEHEN VOR DER TÜR - DU BIST DER SCHLÜSSEL, DER SIE ÖFFNET.-->
-        <!--</p>-->
-        <!--<div class="promo-app__share">-->
-          <!--<a ng-href="https://itunes.apple.com/de/app/investmentpunk-academy/id1226371237"-->
-             <!--class="btn btn-appstore"></a>-->
-          <!--<a ng-href="https://play.google.com/store/apps/details?id=com.kapodistrias.punk"-->
-             <!--class="btn btn-googleplay"></a>-->
-        <!--</div>-->
-      <!--</div>-->
-      <!--<div class="right">-->
-        <!--<img ng-src="img/content/iosandroid.png">-->
-      <!--</div>-->
+      <div class="left">
+        <p class="promo-app__title">APP</p>
+        <p class="promo-app__text safe-html">
+          WERDE JETZT MITGLIED UND NIMM DEINE FINANZIELLE SITUATION SELBST IN DIE HAND. NUR DU KANNST DICH GROSS MACHEN UND DABEI WOLLEN WIR DIR HELFEN. FREIHEIT UND WOHLSTAND STEHEN VOR DER TÜR - DU BIST DER SCHLÜSSEL, DER SIE ÖFFNET.
+        </p>
+        <div class="promo-app__share">
+          <a href="https://itunes.apple.com/de/app/investmentpunk-academy/id1226371237"
+             class="btn btn-appstore"></a>
+          <a href="https://play.google.com/store/apps/details?id=com.kapodistrias.punk"
+             class="btn btn-googleplay"></a>
+        </div>
+      </div>
+      <div class="right">
+        <img src="../../assets/images/content/iosandroid.png">
+      </div>
 
-    <!--</div>-->
-  <!--</div>-->
-
-
-  <!--<div class="stats">-->
-    <!--<div class="container">-->
-      <!--<div class="stats__wrap">-->
-        <!--<div class="stats__item">-->
-          <!--<p class="stats__item-number">{{ $ctrl.content.stats_one }}</p>-->
-          <!--<p class="stats__item-text">{{ $ctrl.content.stats_one_title }}</p>-->
-        <!--</div>-->
-        <!--<div class="stats__item">-->
-          <!--<p class="stats__item-number">{{ $ctrl.content.stats_two }}</p>-->
-          <!--<p class="stats__item-text">{{ $ctrl.content.stats_two_title }}</p>-->
-        <!--</div>-->
-        <!--<div class="stats__item">-->
-          <!--<p class="stats__item-number">{{ $ctrl.content.stats_three }}</p>-->
-          <!--<p class="stats__item-text">{{ $ctrl.content.stats_three_title }}</p>-->
-        <!--</div>-->
-      <!--</div>-->
-    <!--</div>-->
-  <!--</div>-->
+    </div>
+  </div>
 
 
-  <!--<div class="footer">-->
-    <!--<div class="container">-->
-      <!--<div class="footer__top">-->
-        <!--<div class="left">-->
-          <!--<div ui-sref="academy.index()" class="logo cup">-->
-            <!--<img ng-src="img/desktop-logo-white@2x.png">-->
-          <!--</div>-->
-        <!--</div>-->
+  <div class="stats">
+    <div class="container">
+      <div class="stats__wrap">
+        <div class="stats__item">
+          <p class="stats__item-number">{{ page.stats_one }}</p>
+          <p class="stats__item-text">{{ page.stats_one_title }}</p>
+        </div>
+        <div class="stats__item">
+          <p class="stats__item-number">{{ page.stats_two }}</p>
+          <p class="stats__item-text">{{ page.stats_two_title }}</p>
+        </div>
+        <div class="stats__item">
+          <p class="stats__item-number">{{ page.stats_three }}</p>
+          <p class="stats__item-text">{{ page.stats_three_title }}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="footer">
+    <div class="container">
+      <div class="footer__top">
+        <div class="left">
+          <div routerLink="['/']" class="logo cup">
+            <img src="../../assets/images/desktop-logo-white@2x.png">
+          </div>
+        </div>
 
         <!--<div class="right">-->
-          <!--<button ng-click="$ctrl.showSignupModal()" class="btn btn-blue">JETZT MITGLIED WERDEN</button>-->
+          <!--<button (click)="$ctrl.showSignupModal()" class="btn btn-blue">JETZT MITGLIED WERDEN</button>-->
         <!--</div>-->
-      <!--</div>-->
-      <!--<div class="footer__bottom">-->
+      </div>
+      <div class="footer__bottom">
 
         <!--<div class="footer__left">-->
           <!--<p class="copyright-links">-->
@@ -163,28 +166,28 @@
             <!--{{ $ctrl.content.email }}-->
           <!--</a>-->
         <!--</div>-->
-        <!--<div class="footer__center">-->
-          <!--<div class="social-icons">-->
-            <!--<a href="{{ $ctrl.content.youtube }}" target="_blank">-->
-              <!--<svg src="img/icons/social/icon-youtube.svg"></svg>-->
-            <!--</a>-->
-            <!--<a href="{{ $ctrl.content.twitter }}" target="_blank">-->
-              <!--<svg src="img/icons/social/icon-twitter.svg"></svg>-->
-            <!--</a>-->
-            <!--<a href="{{ $ctrl.content.facebook }}" target="_blank">-->
-              <!--<svg src="img/icons/social/icon-facebook.svg"></svg>-->
-            <!--</a>-->
-            <!--<a href="{{ $ctrl.content.instagram }}" target="_blank">-->
-              <!--<svg src="img/icons/social/icon-instagram.svg"></svg>-->
-            <!--</a>-->
-          <!--</div>-->
-          <!--<p class="copyright">© Investment Punk Academy. All Rights Reserved.</p>-->
-        <!--</div>-->
+        <div class="footer__center">
+          <div class="social-icons">
+            <a href="{{ page.youtube }}" target="_blank">
+              <div class="svg" [inlineSVG]="'../../assets/images/icons/social/icon-youtube.svg'"></div>
+            </a>
+            <a href="{{ page.twitter }}" target="_blank">
+              <div class="svg" [inlineSVG]="'../../assets/images/icons/social/icon-twitter.svg'"></div>
+            </a>
+            <a href="{{ page.facebook }}" target="_blank">
+              <div class="svg" [inlineSVG]="'../../assets/images/icons/social/icon-facebook.svg'"></div>
+            </a>
+            <a href="{{ page.instagram }}" target="_blank">
+              <div class="svg" [inlineSVG]="'../../assets/images/icons/social/icon-instagram.svg'"></div>
+            </a>
+          </div>
+          <p class="copyright">© Investment Punk Academy. All Rights Reserved.</p>
+        </div>
 
-      <!--</div>-->
-    <!--</div>-->
-  <!--</div>-->
+      </div>
+    </div>
+  </div>
 
 </div>
 
-<app-loader></app-loader>
+<app-loader *ngIf="!page"></app-loader>

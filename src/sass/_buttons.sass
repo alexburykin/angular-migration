@@ -1,0 +1,127 @@
+.btn
+  display: inline-block
+  width: 100%
+  outline: 0
+  border: 0
+  padding: 0
+  font-family: $opensans
+  height: 36px
+  line-height: 36px
+  font-size: 13px
+  font-weight: 500
+  cursor: pointer
+  transition: .5s all
+  border-radius: 0
+
+.btn-blue
+  font-family: $roboto
+  font-size: 13px
+  width: auto
+  padding: 0 20px
+  height: 36px
+  line-height: 36px
+  letter-spacing: 1px
+  border-radius: 2px
+  font-weight: 500
+  background-color: $sky-blue
+  color: #fff
+  outline: none!important
+  @include bp-768
+    font-size: 12px
+    height: 30px
+    line-height: 30px
+  &-min
+    font-size: 12px
+    height: 30px
+    line-height: 30px
+  &:hover
+    background-color: #7dd7ff
+    color: #fff
+  &:active
+    color: #fff
+    background-color: $cloudy-blue
+
+.btn-blue-t
+  @extend .btn-blue
+  background-color: transparent
+  color: $sky-blue
+
+
+.btn-appstore
+  height: 42px
+  width: 150px
+  background-image: url(../assets/images/icons/landing/appstore.svg)
+  background-size: 70%
+  background-position: 15px center
+  background-repeat: no-repeat
+  background-color: $twilight-blue
+  border-radius: 2px
+  cursor: pointer
+  &:hover
+    background-color: $sky-blue
+
+.btn-googleplay
+  @extend .btn-appstore
+  background-image: url(../assets/images/icons/landing/google.svg)
+
+
+.btn-text-blue
+  width: initial
+  font-family: $roboto
+  font-size: 14px
+  font-weight: 500
+  letter-spacing: 0.5px
+  color: $sky-blue
+  background-color: transparent
+  outline: none !important
+  &:hover
+    color: $twilight-blue
+  &--hv
+    border-radius: 2px
+    height: 36px
+    padding: 0 15px
+    line-height: 36px
+    &:hover
+      color: #fff
+      background-color: $sky-blue
+
+.btn-text-gray
+  @extend .btn-text-blue
+  color: $cloudy-blue
+  &:hover
+    color: $gray-second
+  &--hv
+    border-radius: 2px
+    height: 36px
+    padding: 0 20px
+    line-height: 36px
+    &:hover
+      color: #fff
+      background-color: $twilight-blue
+
+
+.btn-text
+  @extend .btn
+  @extend .btn-text-blue
+  color: $cloudy-blue
+  border-radius: 2px
+  padding: 0 20px
+  height: 36px
+  line-height: 36px
+  &:hover
+    color: #fff
+    background-color: $sky-blue
+  @include bp-768
+    font-size: 12px
+    height: 30px
+    line-height: 30px
+  &-min
+    font-size: 12px
+    height: 30px
+    line-height: 30px
+
+.btn-small
+  font-size: 12px
+  height: 30px
+  line-height: 30px
+

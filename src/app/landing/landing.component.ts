@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { SharedService } from '../_shared/services/shared.service';
 
 @Component({
   selector: 'app-landing',
@@ -7,9 +8,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class LandingComponent implements OnInit {
 
-  constructor() { }
+  public page: any;
+
+  constructor(
+    private _sharedService: SharedService
+  ) { }
 
   ngOnInit() {
+    this._sharedService.getLandingPage().subscribe( res => this.page = res );
   }
 
 }
