@@ -127,3 +127,100 @@
         color: #ffffff
 
 
+//********************* PANELS AND SLIDERS ******************
+.c-panel
+  border-radius: 2px
+  background-color: #ffffff
+  box-shadow: 0 0 2px 0 rgba(0, 0, 0, 0.2)
+  overflow: hidden
+  cursor: pointer
+  transition: .5s all
+  &:hover
+    box-shadow: 0 0 8px 0 rgba(0, 0, 0, 0.4)
+  &__img
+    max-height: 160px
+    overflow: hidden
+    img
+      width: 100%
+      height: 100%
+      //height: auto
+      object-fit: cover
+      object-position: center
+  &__title
+    font-size: 13px
+    font-weight: 500
+    color: $sky-blue
+    margin-bottom: 10px
+  &__descr
+    font-size: 16px
+    line-height: 1.22
+    color: #313131
+  &__info
+    padding: 20px 15px
+  @include bp-768
+    &__descr
+      font-size: 16px
+
+.slider-head
+  @extend %clearfix
+  margin-top: 35px
+  margin-bottom: 20px
+  &__title
+    font-size: 20px
+    font-weight: 500
+    color: #313131
+    @include bp-768
+      font-size: 16px
+  &__label
+    margin-bottom: 10px
+    font-size: 14px
+    font-weight: 500
+    font-style: normal
+    font-stretch: normal
+    color: #9b9b9b
+    @include bp-768
+      font-size: 12px
+  &__arrows
+    cursor: default
+    text-align: right
+    display: flex
+    .arrow:first-child
+      margin-right: 10px
+    .arrow
+      cursor: pointer
+      &:hover
+        *
+          transition: .3s all
+          stroke: $seafoam-blue
+        circle
+          stroke: transparent
+          fill: $seafoam-blue
+
+.home-slider
+  .slick-list
+    margin: 0 -5px
+
+.home-slide
+  padding: 5px
+
+.lecture-slide
+  width: 280px
+  .c-panel
+    &__img
+      height: 155px
+      background-size: cover
+      background-position: center
+    &__title
+      line-height: 18px
+      margin-bottom: 5px
+      transition: .5s all
+      cursor: pointer
+      &:hover
+        color: $cloudy-blue
+    &__info
+      height: 105px
+    &__descr
+      font-size: 14px
+
+
+

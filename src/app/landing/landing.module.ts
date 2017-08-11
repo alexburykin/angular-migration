@@ -14,6 +14,7 @@ import { CommonTextComponent } from './footer/common-text/common-text.component'
 import { CommonTextResolver } from './footer/common-text/common-text-resolver.service';
 import { PricesComponent } from './footer/prices/prices.component';
 import { PricesResolver } from './footer/prices/prices-resolver.service';
+import { SlickModule } from 'ngx-slick';
 
 @NgModule({
   declarations: [
@@ -32,6 +33,7 @@ import { PricesResolver } from './footer/prices/prices-resolver.service';
     Ng2PageScrollModule,
     InlineSVGModule,
     LandingRoutingModule,
+    SlickModule
   ],
   providers: [
     CommonTextResolver,

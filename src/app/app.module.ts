@@ -25,6 +25,6 @@ import 'rxjs';
       useValue: DOMAIN
     },
   ],
-  bootstrap: [AppComponent]
+  bootstrap: [ AppComponent ]
 })
 export class AppModule { }

@@ -54,7 +54,7 @@
 
         <li pageScroll [pageScrollDuration]="300" href="#promoApp">App</li>
 
-        <li [routerLink]="['prices']">Preise</li>
+        <li [routerLink]="['/prices']">Preise</li>
 
         <!--TODO registration modal-->
         <li ng-click="$ctrl.showSignupModal()">Jetzt Mitglied werden</li>
@@ -140,18 +140,18 @@
                         <span ui-sref="academy.tickets" class="cup">
                             Event Tickets
                         </span> |
-            <span [routerLink]="['prices']"> Prices
+            <span [routerLink]="['/prices']"> Prices
             </span>
             <br>
             <span ui-sref="academy.certificate" class="cup">
                             Zertifikat Überprüfen
                         </span> |
 
-            <span [routerLink]="['info', page.jobs_slug ]"> Jobs
+            <span [routerLink]="['/info', page.jobs_slug ]"> Jobs
             </span> |
-            <span [routerLink]="['info', page.privacy_policy_slug ]"> Impressum
+            <span [routerLink]="['/info', page.privacy_policy_slug ]"> Impressum
             </span> |
-            <span [routerLink]="['info', page.terms_and_conditions_slug ]"> AGB
+            <span [routerLink]="['/info', page.terms_and_conditions_slug ]"> AGB
             </span>
           </p>
         </div>
