@@ -1,3 +1,26 @@
-<p>
-  events works!
-</p>
+<div id="events" class="events">
+  <div class="container">
+    <div class="clearfix m-t-30 m-b-30">
+      <div class="left">
+        <p class="blue-title">Events</p>
+      </div>
+      <div class="right text-right">
+        <button ui-sref="academy.events" class="btn btn-text">ALLE EVENTS</button>
+      </div>
+    </div>
+    <div class="events-wrap">
+      <div ng-repeat="event in $ctrl.content.events"
+           ng-init="limit = 75"
+           ui-sref="academy.event({eventId: event.id})"
+           class="panel panel-new">
+        <div class="left" style="background-image: url('{{ event.image }}');"></div>
+        <div class="right">
+          <p class="panel__date">{{ event.date }}</p>
+          <p class="panel__title">{{ event.title }}</p>
+          <p class="panel__subtitle">{{ event.short_description }}</p>
+        </div>
+        <button class="btn btn-text btn-text-min">MEHR DAZU</button>
+      </div>
+    </div>
+  </div>
+</div>

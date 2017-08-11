@@ -1,0 +1,145 @@
+@import "../../../sass/variables"
+@import "../../../sass/mixins"
+
+.get-started
+  //noinspection all
+  //background-image: url(../img/bgs/bg-get-started.jpg)
+  background-size: cover
+  background-repeat: no-repeat
+  background-position: center
+  position: relative
+  padding: 55px 0 170px
+  min-height: 480px
+  @include bp-460
+    padding: 10px 10px 75px
+  &__title
+    height: 28px
+    font-family: $roboto
+    font-size: 24px
+    font-weight: 600
+    text-align: center
+    color: $gray-dark
+    margin-bottom: 30px
+  &__inner
+    padding: 28px 65px
+    width: 100%
+    max-width: 535px
+    margin: auto
+    background-color: rgba(255, 255, 255, .95)
+    @include bp-960
+      margin: auto
+      padding: 30px
+      max-width: 490px
+      .main-title
+        text-align: center
+    @include bp-768
+      .main-title
+        color: #fff
+  &__form
+    .c-input
+    text-align: center
+    margin-bottom: 15px
+    .c-radio
+      span
+        color: $gray-dark
+    .btn-blue
+      margin-top: 10px
+    @include bp-460
+      .c-input
+        margin-bottom: 10px
+      .form-row
+        .left,
+        .right
+          width: 100%
+          padding: 5px 0
+  &__partner
+    padding-left: 10px
+    background-color: #fff
+    font-size: 0
+    position: absolute
+    bottom: 0
+    right: 0
+    max-width: 250px
+    @include bp-960
+
+    @include bp-768
+      max-width: 190px
+      right: 50%
+      transform: translateX(50%)
+
+
+.home-info
+  overflow: hidden
+  height: 200px
+  margin-top: -100px
+  @include bp-960
+    padding: 0 10px
+    height: auto
+  @include bp-460
+    margin-top: -55px
+  .container
+    padding: 30px
+    background-color: $twilight-blue
+    position: relative
+  &__title
+    font-family: $roboto
+    font-size: 22px
+    font-weight: 600
+    color: #ffffff
+  &__text
+    margin: 17px 0 25px
+    color: #fff
+    font-size: 13px
+    line-height: 1.4
+  .btn-blue
+    max-width: 210px
+
+
+.start-study
+  //noinspection all
+  background-image: url(../../../assets/images/bgs/bg-start-study.jpg)
+  background-size: cover
+  background-position: center
+  text-align: center
+  padding: 100px 0
+  font-family: $roboto
+  @include bp-768
+    padding: 70px 0
+  &__title
+    font-size: 24px
+    color: #ffffff
+  &__subtitle
+    margin: 40px auto
+    font-size: 15px
+    line-height: 20px
+    color: #ffffff
+    max-width: 500px
+    span
+      font-family: $roboto
+      position: relative
+      display: inline-block
+      padding: 0 20px
+      &:after
+        content: ''
+        opacity: .2
+        height: 1px
+        width: 30%
+        background-color: #f0f0f0
+        position: absolute
+        top: 50%
+        left: 0
+        transform: translateX(-100%)
+      &:before
+        content: ''
+        opacity: .2
+        height: 1px
+        width: 30%
+        background-color: #f0f0f0
+        position: absolute
+        top: 50%
+        right: 0
+        transform: translateX(100%)
+      @include bp-768
+        &:after,
+        &:before
+          display: none

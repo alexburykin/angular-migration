@@ -1,0 +1,176 @@
+<div *ngIf="page" id="about"
+     style="background-image: url('{{ page.header_image }}')"
+     class="get-started an-fade-in">
+  <div ng-if="!$ctrl.user" class="get-started__inner">
+    <p class="get-started__title">NOCH HEUTE LOSLEGEN!</p>
+    <!--<form name="getStartedForm"-->
+          <!--ng-submit="getStartedForm.$valid && $ctrl.submitShortSignup()"-->
+          <!--class="get-started__form" novalidate>-->
+      <!--<div class="form-row">-->
+        <!--<div class="left">-->
+          <!--<div class="validation text-center" ng-messages="getStartedForm.first_name.$error"-->
+               <!--role="alert" ng-if="getStartedForm.first_name.$dirty || getStartedForm.$submitted">-->
+
+            <!--<span ng-message="required">Vorname fehlt</span>-->
+            <!--<span ng-message="minlength">Vorname ist zu kurz</span>-->
+          <!--</div>-->
+          <!--<input ng-model="$ctrl.newUser.first_name" class="c-input" type="text"-->
+                 <!--placeholder="Vorname" name="first_name"-->
+                 <!--minlength="2" maxlength="150" required>-->
+        <!--</div>-->
+        <!--<div class="right">-->
+          <!--<div class="validation text-center" ng-messages="getStartedForm.last_name.$error"-->
+               <!--role="alert" ng-if="getStartedForm.last_name.$dirty || getStartedForm.$submitted">-->
+
+            <!--<span ng-message="required">Nachname fehlt</span>-->
+            <!--<span ng-message="minlength">Nachname ist zu kurz</span>-->
+          <!--</div>-->
+          <!--<input ng-model="$ctrl.newUser.last_name" class="c-input" type="text"-->
+                 <!--placeholder="Nachname" name="last_name"-->
+                 <!--minlength="2" maxlength="150" required>-->
+        <!--</div>-->
+      <!--</div>-->
+      <!--<div class="form-row">-->
+        <!--<div class="left">-->
+          <!--<div class="validation text-center" ng-messages="getStartedForm.country.$error"-->
+               <!--role="alert" ng-if="getStartedForm.country.$dirty || getStartedForm.$submitted">-->
+            <!--<span ng-message="required">Land fehlt</span>-->
+          <!--</div>-->
+          <!--<div class="c-select c-input m-0">-->
+            <!--<select ng-model="$ctrl.newUser.country" name="country" required-->
+                    <!--ng-options="country for country in $ctrl.countries">-->
+              <!--<option value="">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Land</option>-->
+            <!--</select>-->
+          <!--</div>-->
+        <!--</div>-->
+        <!--<div class="right">-->
+          <!--<div class="validation text-center"-->
+               <!--ng-messages="getStartedForm.city.$error"-->
+               <!--role="alert" ng-if="getStartedForm.city.$dirty || getStartedForm.$submitted">-->
+            <!--<span ng-message="required">Stadt fehlt</span>-->
+          <!--</div>-->
+          <!--<input ng-model="$ctrl.newUser.city" class="c-input" type="text"-->
+                 <!--placeholder="Stadt" name="city" minlength="1" required>-->
+        <!--</div>-->
+      <!--</div>-->
+      <!--<div class="form-row">-->
+        <!--<div class="validation text-center"-->
+             <!--ng-messages="getStartedForm.address.$error"-->
+             <!--role="alert" ng-if="getStartedForm.address.$dirty || getStartedForm.$submitted">-->
+          <!--<span ng-message="required">Adresse fehlt</span>-->
+        <!--</div>-->
+        <!--<input ng-model="$ctrl.newUser.address" class="c-input" type="text"-->
+               <!--placeholder="Adresse" name="address" minlength="1" required>-->
+      <!--</div>-->
+      <!--<div class="form-row">-->
+        <!--<div class="left">-->
+          <!--<div class="validation text-center" ng-messages="getStartedForm.email.$error"-->
+               <!--role="alert" ng-if="getStartedForm.email.$dirty || getStartedForm.$submitted">-->
+
+            <!--<span ng-message="required">Email fehlt</span>-->
+            <!--<span ng-message="pattern">Bitte überprüfe deine Email</span>-->
+            <!--<span ng-message="unique">Deine Email ist schonmal verwendet worden</span>-->
+            <!--<span ng-message="minlength">Email ist zu kurz</span>-->
+
+          <!--</div>-->
+          <!--<input ng-model="$ctrl.newUser.email" class="c-input" type="email"-->
+                 <!--placeholder="E-mail" required name="email" unique-email-->
+                 <!--pattern="^(\S+)@([a-z0-9-]+)(\.)([a-z]{2,4})(\.?)([a-z]{0,4})+$">-->
+        <!--</div>-->
+        <!--<div class="right">-->
+          <!--<div class="validation text-center" ng-messages="getStartedForm.password.$error"-->
+               <!--role="alert" ng-if="getStartedForm.password.$dirt || getStartedForm.$submitted">-->
+            <!--<span ng-message="minlength">Passwort ist zu kurz</span>-->
+            <!--<span ng-message="required">Passwort fehlt</span>-->
+            <!--<span ng-message="pattern">Das Passwort darf keine Leerzeichen enthalten</span>-->
+          <!--</div>-->
+          <!--<input ng-model="$ctrl.newUser.password" class="c-input m-0"-->
+                 <!--placeholder="Passwort" type="password" name="password"-->
+                 <!--pattern="^\S*$" minlength="6" required>-->
+        <!--</div>-->
+      <!--</div>-->
+      <!--<div ng-init="$ctrl.newUser.is_company = '0'" class="form-row m-b-15">-->
+        <!--<div class="left text-center">-->
+          <!--<label ng-click="getStartedForm.$setPristine();getStartedForm.$setUntouched();"-->
+                 <!--class="c-radio">-->
+            <!--<input ng-model="$ctrl.newUser.is_company" value="0" type="radio">-->
+            <!--<span> Privates Konto </span>-->
+          <!--</label>-->
+        <!--</div>-->
+        <!--<div class="right text-center">-->
+          <!--<label ng-click="getStartedForm.$setPristine();getStartedForm.$setUntouched();"-->
+                 <!--class="c-radio">-->
+            <!--<input ng-model="$ctrl.newUser.is_company" value="1" type="radio">-->
+            <!--<span> Firmen Konto </span>-->
+          <!--</label>-->
+        <!--</div>-->
+      <!--</div>-->
+      <!--<div ng-if="$ctrl.newUser.is_company == '1'" class="an-slide-in-bot m-t-15">-->
+        <!--<div class="form-row">-->
+          <!--<div class="validation text-center"-->
+               <!--ng-messages="getStartedForm.company.$error"-->
+               <!--role="alert" ng-if="getStartedForm.company.$dirty || getStartedForm.$submitted">-->
+            <!--<span ng-message="required">Firma fehlt</span>-->
+          <!--</div>-->
+          <!--<input ng-model="$ctrl.newUser.company" class="c-input" type="text"-->
+                 <!--placeholder="Firma" name="company" minlength="1" required>-->
+        <!--</div>-->
+        <!--<div class="form-row">-->
+          <!--<div class="left">-->
+            <!--<div class="validation text-center"-->
+                 <!--ng-messages="getStartedForm.tax_id.$error"-->
+                 <!--role="alert" ng-if="getStartedForm.tax_id.$dirty || getStartedForm.$submitted">-->
+              <!--<span ng-message="required">Steuernummer fehlt</span>-->
+            <!--</div>-->
+            <!--<input ng-model="$ctrl.newUser.tax_id" class="c-input" type="text"-->
+                   <!--placeholder="Steuernummer" name="tax_id" minlength="1" required>-->
+          <!--</div>-->
+          <!--<div class="right">-->
+            <!--<div class="validation text-center"-->
+                 <!--ng-messages="getStartedForm.zip_code.$error"-->
+                 <!--role="alert" ng-if="getStartedForm.zip_code.$dirty || getStartedForm.$submitted">-->
+              <!--<span ng-message="required">Postleitzahl fehlt</span>-->
+            <!--</div>-->
+            <!--<input ng-model="$ctrl.newUser.zip_code" class="c-input" type="text"-->
+                   <!--placeholder="Postleitzahl" name="zip_code" minlength="1" required>-->
+          <!--</div>-->
+        <!--</div>-->
+
+      <!--</div>-->
+      <!--<div class="terms-text">-->
+        <!--<label>-->
+          <!--<input type="checkbox" ng-model="isTermsChecked">  Ich erkläre mich mit den-->
+          <!--<a href="https://investmentpunk.academy/info/agb/"-->
+             <!--target="_blank">AGB`s</a> einverstanden.-->
+        <!--</label>-->
+      <!--</div>-->
+      <!--<div class="text-center">-->
+        <!--<button ng-disabled="!isTermsChecked" type="submit" class="btn btn-blue">JETZT MITGLIED WERDEN</button>-->
+      <!--</div>-->
+    <!--</form>-->
+  </div>
+  <!--<div class="get-started__partner">-->
+  <!--<img class="img-responsive" src="img/content/partner.jpg" alt="">-->
+  <!--</div>-->
+</div>
+
+<div *ngIf="page" class="home-info an-slide-in-bot">
+  <div class="container">
+    <p class="home-info__title">{{ page.header_title }}</p>
+    <p [innerHTML]="page.header_text" class="safe-html home-info__text"></p>
+    <!--<div class="text-right">-->
+    <!--<button ng-click="$ctrl.showSignupModal()" class="btn btn-blue-t">MEHR ERFAHREN</button>-->
+    <!--</div>-->
+  </div>
+</div>
+
+<app-courses [page]="page"></app-courses>
+<app-teachers [page]="page"></app-teachers>
+
+<div class="start-study">
+  <p class="start-study__title">MITGLIED WERDEN BEI DER ACADEMY UND VOM NETZWERK PROFITIEREN</p>
+  <p class="start-study__subtitle"><span>Als Mitglied der Investment Punk Academy stehen Dir alle Tore in die finanzielle Freiheit offen. Das vermittelte Wissen kann direkt angewendet werden. Zusätzlich steht Gerald Hörhan persönlich alle 14 Tage im Live-Chat für Fragen zu wirtschaftlichen Themen zur Verfügung. Die große Community der Academy bietet zusätzlich die Möglichkeit, sich mit anderen Mitgliedern und Gleichgesinnten auszutauschen und zu vernetzen. </span></p>
+  <button ng-click="$ctrl.showSignupModal()" class="btn btn-blue">JETZT MITGLIED WERDEN</button>
+</div>
+
+<app-events [page]="page"></app-events>

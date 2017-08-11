@@ -38,22 +38,24 @@
 
   <div class="menu">
     <div class="container">
-      <div class="logo cup" ui-sref="academy.index()">
+      <div class="logo cup" [routerLink]="['/']">
         <img src="../../assets/images/desktop-logo@2x.png" alt="">
       </div>
       <ul class="main-nav" [ngClass]="{'open' : isNavOpen}">
-        <li ui-sref="academy.index({s: 'about'})"
-            du-smooth-scroll="about">Home</li>
-        <li ui-sref="academy.index({s: 'courses'})"
-            du-smooth-scroll="courses">Kurse</li>
-        <li ui-sref="academy.index({s: 'mentors'})"
-            du-smooth-scroll="mentors">Mentoren</li>
-        <li ui-sref="academy.index({s: 'events'})"
-            du-smooth-scroll="events">Events</li>
 
-        <li pageScroll href="#promoApp">App</li>
+
+        <li pageScroll [pageScrollDuration]="300" href="#about">Home</li>
+
+        <li pageScroll [pageScrollDuration]="300" href="#courses">Kurse</li>
+
+        <li pageScroll [pageScrollDuration]="300" href="#mentors">Mentoren</li>
+
+        <li pageScroll [pageScrollDuration]="300" href="#events">Events</li>
+
+        <li pageScroll [pageScrollDuration]="300" href="#promoApp">App</li>
 
         <li ui-sref="academy.prices">Preise</li>
+
         <li ng-click="$ctrl.showSignupModal()">Jetzt Mitglied werden</li>
       </ul>
 
@@ -124,13 +126,15 @@
           </div>
         </div>
 
-        <!--<div class="right">-->
-          <!--<button (click)="$ctrl.showSignupModal()" class="btn btn-blue">JETZT MITGLIED WERDEN</button>-->
-        <!--</div>-->
+        <div class="right">
+          <!--TODO add open of signUp modal-->
+          <button (click)="''" class="btn btn-blue">JETZT MITGLIED WERDEN</button>
+        </div>
       </div>
       <div class="footer__bottom">
 
-        <!--<div class="footer__left">-->
+        <div class="footer__left">
+          <!--TODO update this links when pages will be ready-->
           <!--<p class="copyright-links">-->
                         <!--<span ui-sref="academy.tickets" class="cup">-->
                             <!--Event Tickets-->
@@ -155,30 +159,32 @@
                             <!--AGB-->
                         <!--</span>-->
           <!--</p>-->
-        <!--</div>-->
-        <!--<div class="footer__right">-->
-          <!--<a class="contact-link" href="tel:{{ $ctrl.content.phone }}">-->
-            <!--<svg src="/img/icons/landing/icon-phone-lp.svg" class="icon icon-phone-lp"></svg>-->
-            <!--{{ $ctrl.content.phone }}-->
-          <!--</a>-->
-          <!--<a class="contact-link" href="mailto:{{ $ctrl.content.email }}">-->
-            <!--<svg src="img/icons/landing/icon-mail-lp.svg" class="icon icon-mail-lp"></svg>-->
-            <!--{{ $ctrl.content.email }}-->
-          <!--</a>-->
-        <!--</div>-->
+        </div>
+        <div class="footer__right">
+          <a class="contact-link" href="tel:{{ page.phone }}">
+            <div [inlineSVG]="'../../assets/images/icons/landing/icon-phone-lp.svg'"
+                 class="icon icon-phone-lp"></div>
+            {{ page.phone }}
+          </a>
+          <a class="contact-link" href="mailto:{{ page.email }}">
+            <div [inlineSVG]="'../../assets/images/icons/landing/icon-mail-lp.svg'"
+                 class="icon icon-mail-lp"></div>
+            {{ page.email }}
+          </a>
+        </div>
         <div class="footer__center">
           <div class="social-icons">
             <a href="{{ page.youtube }}" target="_blank">
-              <div class="svg" [inlineSVG]="'../../assets/images/icons/social/icon-youtube.svg'"></div>
+              <div [inlineSVG]="'../../assets/images/icons/social/icon-youtube.svg'"></div>
             </a>
             <a href="{{ page.twitter }}" target="_blank">
-              <div class="svg" [inlineSVG]="'../../assets/images/icons/social/icon-twitter.svg'"></div>
+              <div [inlineSVG]="'../../assets/images/icons/social/icon-twitter.svg'"></div>
             </a>
             <a href="{{ page.facebook }}" target="_blank">
-              <div class="svg" [inlineSVG]="'../../assets/images/icons/social/icon-facebook.svg'"></div>
+              <div [inlineSVG]="'../../assets/images/icons/social/icon-facebook.svg'"></div>
             </a>
             <a href="{{ page.instagram }}" target="_blank">
-              <div class="svg" [inlineSVG]="'../../assets/images/icons/social/icon-instagram.svg'"></div>
+              <div [inlineSVG]="'../../assets/images/icons/social/icon-instagram.svg'"></div>
             </a>
           </div>
           <p class="copyright">© Investment Punk Academy. All Rights Reserved.</p>

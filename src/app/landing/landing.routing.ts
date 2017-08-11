@@ -4,7 +4,7 @@ import { CommonModule } from '@angular/common';
 import { Route, RouterModule } from '@angular/router';
 
 import { LandingComponent } from './landing.component';
-import { EventsComponent } from './events/events.component';
+import { IntroComponent } from './intro/intro.component';
 
 const landingRoutes: Route[] = [
   {
@@ -13,7 +13,7 @@ const landingRoutes: Route[] = [
     children: [
       {
         path: '',
-        component: EventsComponent,
+        component: IntroComponent,
       },
     ]
   }

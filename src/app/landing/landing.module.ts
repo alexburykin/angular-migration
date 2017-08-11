@@ -6,6 +6,9 @@ import { EventsComponent } from './events/events.component';
 import { SharedModule } from '../_shared/shared.module';
 import { Ng2PageScrollModule } from 'ng2-page-scroll';
 import { InlineSVGModule } from 'ng-inline-svg';
+import { IntroComponent } from './intro/intro.component';
+import { TeachersComponent } from './teachers/teachers.component';
+import { CoursesComponent } from './courses/courses.component';
 
 @NgModule({
   imports: [
@@ -17,7 +20,10 @@ import { InlineSVGModule } from 'ng-inline-svg';
   ],
   declarations: [
     LandingComponent,
-    EventsComponent
+    EventsComponent,
+    IntroComponent,
+    TeachersComponent,
+    CoursesComponent
   ]
 })
 export class LandingModule { }

@@ -1,0 +1,42 @@
+@import "../../../sass/variables"
+@import "../../../sass/mixins"
+
+.teachers
+  padding-bottom: 60px
+  background-color: #fafafa
+  .slider-head
+    margin-top: 55px
+    margin-bottom: 20px
+
+.lp-teacher-slide
+  width: 250px
+  .c-panel
+    box-shadow: none
+    &__img
+      height: 220px
+      max-height: 220px
+      background-size: contain
+      background-repeat: no-repeat
+      background-position: center
+    &__title
+      font-family: $roboto
+      font-size: 14px
+      font-weight: 600
+      text-transform: uppercase
+      color: $gray-dark
+      transition: .5s all
+      margin: 10px 0 20px
+    &__info
+      height: 160px
+    &__descr
+      transition: .5s all
+      font-size: 12px
+      line-height: 1.5
+      color: #9b9b9b
+  &:hover
+    .c-panel
+      box-shadow: 0 0 8px 0 rgba(0, 0, 0, 0.2)
+      &__title
+        color: $sky-blue
+      &__descr
+        color: $gray-dark
