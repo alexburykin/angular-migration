@@ -9,6 +9,7 @@ import { InlineSVGModule } from 'ng-inline-svg';
 import { IntroComponent } from './intro/intro.component';
 import { TeachersComponent } from './teachers/teachers.component';
 import { CoursesComponent } from './courses/courses.component';
+import { EventListComponent } from './events/event-list/event-list.component';
 
 @NgModule({
   imports: [
@@ -23,7 +24,8 @@ import { CoursesComponent } from './courses/courses.component';
     EventsComponent,
     IntroComponent,
     TeachersComponent,
-    CoursesComponent
+    CoursesComponent,
+    EventListComponent
   ]
 })
 export class LandingModule { }

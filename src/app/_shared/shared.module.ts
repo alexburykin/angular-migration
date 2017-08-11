@@ -9,6 +9,8 @@ import { ModalComponent } from './components/modal/modal.component';
 import { ModalService } from './components/modal/modal.service';
 import { SharedService } from './services/shared.service';
 import { BaseRequestOptions, HttpModule, } from '@angular/http';
+import { TruncatePipe } from './pipes/truncate.pipe';
+import { LandingResolver } from './services/landing-resolver.service';
 
 @NgModule({
   imports: [
@@ -20,18 +22,21 @@ import { BaseRequestOptions, HttpModule, } from '@angular/http';
     ModalComponent,
     LoaderComponent,
     InfiniteScrollDirective,
+    TruncatePipe,
   ],
   exports: [
     ModalComponent,
     LoaderComponent,
-    InfiniteScrollDirective
+    InfiniteScrollDirective,
+    TruncatePipe
   ],
   providers: [
     ApiService,
     UtilsService,
     ModalService,
     SharedService,
-    BaseRequestOptions
+    BaseRequestOptions,
+    LandingResolver
   ],
   entryComponents: [
   ]

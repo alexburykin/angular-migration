@@ -41,3 +41,141 @@ body
   transition: .5s all
   img
     width: 26px
+
+//************************ TITLES **************************
+
+.title
+  font-family: $roboto
+  font-size: 18px
+  font-weight: 600
+  color: $gray-dark
+  margin: 0
+.main-title
+  font-family: $robotoslab
+  font-size: 30px
+  font-weight: bold
+  color: $gray-dark
+  &--black
+    color: $gray-dark
+  &--white
+    color: #fff
+  &--blue
+    color: $blue-first
+  &--sans
+    font-family: $opensans
+  @include bp-768
+    font-size: 26px
+.db-title
+  font-family: $robotoslab
+  font-weight: bold
+  color: #fff
+  font-size: 22px
+
+.lp-subtitle
+  color: $gray-dark
+  font-size: 16px
+
+.blue-title
+  font-family: $roboto
+  font-size: 38px
+  font-weight: 300
+  color: $seafoam-blue
+  @include bp-768
+    font-size: 22px
+    line-height: 30px
+.blue-subtitle
+  font-family: $roboto
+  font-size: 14px
+  font-weight: 600
+  color: $sky-blue
+
+.db-blue-subtitle
+  font-family: $roboto
+  font-size: 16px
+  font-weight: 600
+  color: $seafoam-blue
+.db-blue-light-title
+  font-family: $roboto
+  font-size: 31px
+  font-weight: normal
+  font-style: normal
+  font-stretch: normal
+  color: $sky-blue
+
+.font-gray
+  color: $gray-light
+  font-weight: inherit
+.cf-title
+  font-family: $roboto
+  font-size: 15px
+  font-weight: 600
+  color: $greyish-brown
+  span
+    font-size: 13px
+    display: inline-block
+    vertical-align: middle
+    margin-right: 15px
+    padding-top: 5px
+    height: 26px
+    width: 26px
+    border-radius: 50%
+    border: 1px solid $greyish-brown
+    text-align: center
+.cf-title-gray
+  font-family: $roboto
+  font-size: 18px
+  font-weight: 500
+  color: $cloudy-blue
+.black-subtitle
+  font-family: $roboto
+  font-size: 24px
+  font-weight: 500
+  color: $gray-dark
+
+//************************ PANELS **************************
+
+.panel
+  @extend %clearfix
+  box-shadow: 0 0 2px 0 rgba(0, 0, 0, 0.2)
+  border: 0
+  border-radius: 2px
+  overflow: hidden
+  transition: .5s all
+
+.panel-new
+  height: 140px
+  position: relative
+  .btn-text-min
+    position: absolute
+    right: 10px
+    bottom: 10px
+  &:hover
+    .btn-text-min
+      color: #ffffff
+      background-color: $sky-blue
+  &.panel
+    .left
+      font-size: 0
+      height: 140px
+      width: 140px
+      overflow: hidden
+    .right
+      width: calc(100% - 140px)
+      padding: 15px
+    .panel
+      &__date
+        font-family: $roboto
+        font-size: 13px
+        font-weight: 600
+        color: #9b9b9b
+      &__title
+        font-family: $roboto
+        font-size: 18px
+        line-height: 22.0px
+        color: $gray-dark
+        margin: 10px 0
+      &__subtitle
+        font-family: $roboto
+        font-size: 14px
+        line-height: 18.0px
+        color: $greyish-brown

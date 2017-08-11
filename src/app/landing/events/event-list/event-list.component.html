@@ -10,8 +10,8 @@
         <button [routerLink]="['events']" class="btn btn-text">ALLE EVENTS</button>
       </div>
     </div>
-        <!--TODO: update ui-sref-->
-        <!--ui-sref="academy.event({eventId: event.id})"-->
+    <!--TODO: update ui-sref-->
+    <!--ui-sref="academy.event({eventId: event.id})"-->
     <div class="events-wrap">
       <div *ngFor="let event of page.events" class="panel panel-new">
         <div class="left" [ngStyle]="{'background-image': 'url('+ event.image +')'}"></div>

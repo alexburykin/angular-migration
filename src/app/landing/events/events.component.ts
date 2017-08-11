@@ -1,4 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-events',
@@ -7,11 +8,14 @@ import { Component, Input, OnInit } from '@angular/core';
 })
 export class EventsComponent implements OnInit {
 
-  @Input() public page;
+  public page: any;
 
-  constructor() { }
+  constructor(
+    private _activatedRoute: ActivatedRoute
+  ) { }
 
   ngOnInit() {
+    this._activatedRoute.data.subscribe( data => this.page  = data.page );
   }
 
 }

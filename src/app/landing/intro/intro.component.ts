@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { SharedService } from '../../_shared/services/shared.service';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-intro',
@@ -11,11 +11,11 @@ export class IntroComponent implements OnInit {
   public page: any;
 
   constructor(
-    private _sharedService: SharedService
+    private _activatedRoute: ActivatedRoute
   ) { }
 
   ngOnInit() {
-    this._sharedService.getLandingPage().subscribe( res => this.page = res );
+    this._activatedRoute.data.subscribe( data => this.page  = data.page );
   }
 
 }

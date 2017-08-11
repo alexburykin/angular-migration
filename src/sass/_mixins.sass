@@ -38,4 +38,20 @@
   @media (max-width: 400px)
     @content
 
+//************************ MARGINS *************************
+@for $i from 1 through 30
+  .#{m-t}-#{$i}
+    margin-top: 0px + $i
 
+@for $i from 1 through 30
+  .#{m-b}-#{$i}
+    margin-bottom: 0px + $i
+
+//************************ PADDINGS *************************
+@for $i from 1 through 30
+  .#{p-t}-#{$i}
+    padding-top: 0px + $i
+
+@for $i from 1 through 30
+  .#{p-b}-#{$i}
+    padding-bottom: 0px + $i

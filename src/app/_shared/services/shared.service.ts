@@ -9,7 +9,4 @@ export class SharedService {
     private _api: ApiService,
   ) {}
 
-  public getLandingPage(): Observable<any> {
-    return this._api.get('/api/v1/core/get-landings-data/');
-  }
 }
