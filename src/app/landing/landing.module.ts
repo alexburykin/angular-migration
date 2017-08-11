@@ -15,6 +15,8 @@ import { CommonTextResolver } from './footer/common-text/common-text-resolver.se
 import { PricesComponent } from './footer/prices/prices.component';
 import { PricesResolver } from './footer/prices/prices-resolver.service';
 import { SlickModule } from 'ngx-slick';
+import { TeacherComponent } from './teachers/teacher/teacher.component';
+import { TeacherResolver } from './teachers/teacher/teacher-resolver.service';
 
 @NgModule({
   declarations: [
@@ -25,7 +27,8 @@ import { SlickModule } from 'ngx-slick';
     CoursesComponent,
     EventListComponent,
     CommonTextComponent,
-    PricesComponent
+    PricesComponent,
+    TeacherComponent
   ],
   imports: [
     CommonModule,
@@ -37,7 +40,8 @@ import { SlickModule } from 'ngx-slick';
   ],
   providers: [
     CommonTextResolver,
-    PricesResolver
+    PricesResolver,
+    TeacherResolver
   ]
 })
 export class LandingModule { }

@@ -24,7 +24,10 @@
                #slickModal="slick-modal"
                [config]="slideConfig">
 
-      <div [routerLink]="['/']" ngxSlickItem *ngFor="let t of page.teachers" class="home-slide lp-teacher-slide">
+      <div ngxSlickItem
+           *ngFor="let t of page.teachers"
+           [routerLink]="['/teacher', t.id]"
+           class="home-slide lp-teacher-slide">
 
         <div class="c-panel">
           <div class="c-panel__img" [ngStyle]="{'background-image': 'url(' + t.photo + ')'}"></div>

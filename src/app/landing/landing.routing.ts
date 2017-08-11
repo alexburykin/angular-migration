@@ -11,6 +11,8 @@ import { CommonTextComponent } from './footer/common-text/common-text.component'
 import { CommonTextResolver } from './footer/common-text/common-text-resolver.service';
 import { PricesComponent } from './footer/prices/prices.component';
 import { PricesResolver } from './footer/prices/prices-resolver.service';
+import { TeacherComponent } from './teachers/teacher/teacher.component';
+import { TeacherResolver } from './teachers/teacher/teacher-resolver.service';
 
 const landingRoutes: Route[] = [
   {
@@ -32,6 +34,11 @@ const landingRoutes: Route[] = [
         path: 'info/:slug',
         component: CommonTextComponent,
         resolve: { page: CommonTextResolver },
+      },
+      {
+        path: 'teacher/:id',
+        component: TeacherComponent,
+        resolve: { teacher: TeacherResolver}
       },
       {
         path: 'prices',

@@ -1,0 +1,57 @@
+<div *ngIf="teacher" class="teacher">
+  <div class="container">
+    <div class="left">
+      <div class="teacher__photo">
+        <img src="{{ teacher.photo }}" class="img-responsive" alt="teacher-photo">
+      </div>
+      <div class="panel">
+        <h3 class="title">Basisinformation:</h3>
+        <p>{{ teacher.basic_info }}</p>
+        <h3 class="title">Links:</h3>
+        <div *ngFor="let link of teacher.links" class="teacher-link">
+          <i class="icon icon-planet"></i>
+          <a href="{{ link.link }}">{{ link.link }}</a>
+        </div>
+        <h3 class="title">Bücher:</h3>
+        <div class="books">
+          <div *ngFor="let book of teacher.books" class="books__item">
+            <a href="{{ book.url }}">
+              <img src="{{ book.book_cover }}" alt="">
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--<div class="left">-->
+      <!---->
+    <!--</div>-->
+    <div class="right">
+      <div class="panel">
+        <h1 class="title">{{ teacher.name }}</h1>
+        <p [innerHTML]="teacher.detail_overview" class="safe-html teacher__text"></p>
+      </div>
+
+      <!--TODO: update due to #127 issue or Remove-->
+      <!--<div ng-if="false" class="panel course-lectures">-->
+        <!--<h2 class="title">Lektionen</h2>-->
+        <!--<div ng-repeat="lecture in teacher.teacher_lectures" class="course-lecture">-->
+          <!--{{ lecture }}-->
+          <!--<div ng-click="isLectureOpen = !isLectureOpen" class="course-lecture__head">-->
+            <!--Lorem ipsum dolor sit amet, consectetur adipisicing elit.-->
+          <!--</div>-->
+          <!--<div class="course-lecture__body" ng-class="{'open' : isLectureOpen}">-->
+            <!--<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut natus quis ut? Dignissimos, eius nihil. A asperiores culpa deleniti dolor, dolorem doloremque et eveniet fugit nihil quae quasi quo tempore.</p>-->
+            <!--<div class="text-center">-->
+              <!--<button ui-sref="academy.lecture({lectureSlug: lecture.slug})"-->
+                      <!--class="btn btn-text btn&#45;&#45;250">OPEN LECTURE-->
+              <!--</button>-->
+            <!--</div>-->
+          <!--</div>-->
+        <!--</div>-->
+      <!--</div>-->
+    </div>
+
+  </div>
+</div>
+
+<app-loader *ngIf="!teacher"></app-loader>
