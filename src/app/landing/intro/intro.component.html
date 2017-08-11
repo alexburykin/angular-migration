@@ -1,5 +1,5 @@
 <div *ngIf="page" id="about"
-     style="background-image: url('{{ page.header_image }}')"
+     [ngStyle]="{'background-image': 'url('+ page.header_image +')'}"
      class="get-started an-fade-in">
   <div ng-if="!$ctrl.user" class="get-started__inner">
     <p class="get-started__title">NOCH HEUTE LOSLEGEN!</p>

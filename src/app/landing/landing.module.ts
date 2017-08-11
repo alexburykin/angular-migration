@@ -10,22 +10,32 @@ import { IntroComponent } from './intro/intro.component';
 import { TeachersComponent } from './teachers/teachers.component';
 import { CoursesComponent } from './courses/courses.component';
 import { EventListComponent } from './events/event-list/event-list.component';
+import { CommonTextComponent } from './footer/common-text/common-text.component';
+import { CommonTextResolver } from './footer/common-text/common-text-resolver.service';
+import { PricesComponent } from './footer/prices/prices.component';
+import { PricesResolver } from './footer/prices/prices-resolver.service';
 
 @NgModule({
-  imports: [
-    CommonModule,
-    LandingRoutingModule,
-    SharedModule,
-    Ng2PageScrollModule,
-    InlineSVGModule
-  ],
   declarations: [
     LandingComponent,
     EventsComponent,
     IntroComponent,
     TeachersComponent,
     CoursesComponent,
-    EventListComponent
+    EventListComponent,
+    CommonTextComponent,
+    PricesComponent
+  ],
+  imports: [
+    CommonModule,
+    SharedModule,
+    Ng2PageScrollModule,
+    InlineSVGModule,
+    LandingRoutingModule,
+  ],
+  providers: [
+    CommonTextResolver,
+    PricesResolver
   ]
 })
 export class LandingModule { }

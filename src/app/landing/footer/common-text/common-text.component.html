@@ -1,0 +1,18 @@
+<div *ngIf="page" class="simple">
+  <div class="container">
+
+    <div class="panel">
+      <div class="simple__cover"
+           [ngStyle]="{'background-image': 'url('+ page.image +')'}"></div>
+      <div class="simple__info">
+        <div class="simple__title">{{ page.heading }}</div>
+        <div class="simple-text">
+
+          <div [innerHTML]="page.body | safeHtml" class="safe-html"></div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+<app-loader *ngIf="!page"></app-loader>

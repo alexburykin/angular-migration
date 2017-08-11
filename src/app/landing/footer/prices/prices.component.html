@@ -1,0 +1,137 @@
+<div id="prices" class="prices">
+
+  <div class="container">
+    <div class="prices__subtitle">Fange heute an zu lernen!</div>
+    <div class="prices__title">Wähle deine Mitgliedschaft</div>
+
+    <div class="plan-wrap prices-plans">
+
+      <div *ngFor="let membership of memberships"
+           class="plan">
+        <div class="plan__head">
+          <div class="plan__name">{{ membership.type }}</div>
+          <div class="plan__price">{{ membership.price_text }}</div>
+          <div class="plan__hint">{{ membership.price_description }}</div>
+        </div>
+        <div class="plan__body">
+          <div [innerHTML]="membership.features | safeHtml" class="safe-html"></div>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="prices__btn">
+      <button onclick="window.openLink('/db/auth')" class="btn btn-blue">JETZT ANMELDEN</button>
+    </div>
+
+    <div class="blue-title">Testimonials</div>
+
+    <div class="notes">
+      <div class="panel note">
+        <div class="note__img">
+          <img src="../../../../assets/images/content/notes/christina_hahn.jpg" alt="">
+        </div>
+        <div class="note__author">Christina Hahn</div>
+        <div class="note__text">
+          Toll dass du dich um die Bildung von jungen Menschen kümmerst. [...] Dein Talent ist es schwierige Themen einfach und leicht verständlich zu erklären. Weiter so!
+        </div>
+      </div>
+      <div class="panel note">
+        <div class="note__img">
+          <img src="../../../../assets/images/content/notes/dominik_schurg.jpg" alt="">
+        </div>
+        <div class="note__author">Dominik Schurg</div>
+        <div class="note__text">
+          Hab mir dein Buch vorbestellt, daher hab ich schon die Mitgliedschaft! [...] Investment Punk Academy ist auch mega, ich bin beeindruckt!
+        </div>
+      </div>
+      <div class="panel note">
+        <div class="note__img">
+          <img src="../../../../assets/images/content/notes/wllbrck_flo.jpg" alt="">
+        </div>
+        <div class="note__author">Florian Wellbrock</div>
+        <div class="note__text">
+          "Gerald ist super! Seine Akademie ist genial. Und in den Livechats kommt er auch sehr sympathisch und zielstrebig rüber! Habe viel von ihm gelernt!"
+        </div>
+      </div>
+    </div>
+
+    <div class="blue-title">Questions and Answers</div>
+
+    <div class="panel faq">
+
+      <div class="faq__item">
+        <div class="faq__question">
+          Welches Vorwissen brauche ich um die Investment Punk Academy nutzen zu können?
+        </div>
+        <div class="faq__answer">
+          Gar keines. Die Investment Punk Academy eignet sich sowohl für Anfänger als auch für Fortgeschrittene. Es werden regelmäßig neue Inhalte hinzugefügt, so kannst Du Dein finanzielles Wissen aufbauen und ständig weiterentwickeln.
+        </div>
+      </div>
+      <div class="faq__item">
+        <div class="faq__question">
+          Habt ihr auch Angebote für Studenten?
+        </div>
+        <div class="faq__answer">
+          Ja. Für Schüler- und Studenten gibt es vergünstigte Monats- und Jahresmitgliedschaften, sowie vergünstigte Premium-Mitgliedschaften. Außerdem bieten wir immer wieder spezielle Aktionen für Schüler und Studenten für unsere Seminare an. Aktuelle Termine findest Du hier.
+        </div>
+      </div>
+
+      <div class="faq__item">
+        <div class="faq__question">
+          Wie oft werden neue Inhalte veröffentlicht?
+        </div>
+        <div class="faq__answer">
+          Wöchentlich! In Deinem Dashboard kannst Du einsehen welche Inhalte Du bereits gesehen hast und welche noch nicht.
+        </div>
+      </div>
+      <div class="faq__item">
+        <div class="faq__question">
+          Bin ich an einen Vertrag gebunden?
+        </div>
+        <div class="faq__answer">
+          Du kannst Deine Mitgliedschaft jederzeit und kostenfrei kündigen. Dazu wende Dich bitte einfach an unseren Kundenservice.
+        </div>
+      </div>
+
+      <div class="faq__item">
+        <div class="faq__question">
+          Brauche ich spezielle Unterlagen oder Bücher?
+        </div>
+        <div class="faq__answer">
+          Du brauchst keine zusätzlichen Unterlagen oder Bücher zu kaufen. Eventuelle Zusatzunterlagen werden kostenfrei zum Download zur Verfügung gestellt.
+        </div>
+      </div>
+      <div class="faq__item">
+        <div class="faq__question">
+          Wie lange werde ich brauchen um das Wissen aus der Investment Punk Academy für meine finanzielle Unabhängigkeit nutzen zu können?
+        </div>
+        <div class="faq__answer">
+          Das kommt darauf an wieviel Zeit und Arbeit Du gewillt bist zu investieren. In der Investment Punk Academy kannst Du lernen wie Du Dir mit Fleiß und harter Arbeit Deine finanzielle Unabhängigkeit erarbeiten kannst. Je mehr Zeit Du investierst, desto schneller werden sich Erfolge einstellen.
+        </div>
+      </div>
+
+
+
+      <div class="faq__item">
+        <div class="faq__question">
+          Was ist, wenn ich eine Mitgliedschaft abschließe und mir die Inhalte dann aber doch nicht zusagen?
+        </div>
+        <div class="faq__answer">
+          In der Investment Punk Academy bieten wir eine 30-Tage-Geld-zurück-Grantie an. Das heißt, wenn Du nicht zufrieden bist mit dem was Du bekommst, erstatten wir Dir selbstverständlich Dein Geld zurück. Wir würden uns allerdings sehr über Feedback freuen, da wir unsere Plattform den Wünschen und Bedürfnissen unserer Kunden anpassen und uns ständig verbessern wollen.
+        </div>
+      </div>
+      <div class="faq__item">
+        <div class="faq__question">
+          Was genau beinhaltet die Mitgliedschaft bei der Investment Punk Academy?
+        </div>
+        <div class="faq__answer">
+          Bei jeder Mitgliedschaft bekommst du 4 Kurse (inkl. 50 Lektionen) sofort freigeschalten. Danach kannst Du Dir jede Woche zwei weitere Lern-Videos ansehen. Außerdem hast du Zugriff auf unser Mitglieder-Forum sowie unseren Chatroom und auf den Live-Chat mit dem Investment Punk, Gerald Hörhan, der alle zwei Wochen stattfindet. Alle Academy-Mitglieder bekommen noch dazu 15% Rabatt auf die Seminare von Gerald Hörhan.
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+
+</div>

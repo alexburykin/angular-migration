@@ -6,6 +6,8 @@ import { AppRoutingModule } from './app.routing';
 import { LandingModule } from './landing/landing.module';
 import { SharedModule } from './_shared/shared.module';
 import { DOMAIN } from '../config';
+// tslint:disable-next-line
+import 'rxjs';
 
 @NgModule({
   declarations: [

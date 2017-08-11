@@ -44,18 +44,19 @@
       <ul class="main-nav" [ngClass]="{'open' : isNavOpen}">
 
 
-        <li pageScroll [pageScrollDuration]="300" href="#about">Home</li>
+        <li pageScroll [pageScrollDuration]="300" [routerLink]="['/']" href="#about">Home</li>
 
         <li pageScroll [pageScrollDuration]="300" href="#courses">Kurse</li>
 
         <li pageScroll [pageScrollDuration]="300" href="#mentors">Mentoren</li>
 
-        <li pageScroll [pageScrollDuration]="300" href="#events">Events</li>
+        <li pageScroll [pageScrollDuration]="300" [routerLink]="['events']" href="#events">Events</li>
 
         <li pageScroll [pageScrollDuration]="300" href="#promoApp">App</li>
 
-        <li ui-sref="academy.prices">Preise</li>
+        <li [routerLink]="['prices']">Preise</li>
 
+        <!--TODO registration modal-->
         <li ng-click="$ctrl.showSignupModal()">Jetzt Mitglied werden</li>
       </ul>
 
@@ -135,30 +136,24 @@
 
         <div class="footer__left">
           <!--TODO update this links when pages will be ready-->
-          <!--<p class="copyright-links">-->
-                        <!--<span ui-sref="academy.tickets" class="cup">-->
-                            <!--Event Tickets-->
-                        <!--</span> |-->
-            <!--<span ui-sref="academy.prices">-->
-                            <!--Prices-->
-                        <!--</span>-->
-            <!--<br>-->
-            <!--<span ui-sref="academy.certificate" class="cup">-->
-                            <!--Zertifikat Überprüfen-->
-                        <!--</span> |-->
-            <!--<span ui-sref="academy.simple-text(-->
-                        <!--{slug: $ctrl.content.jobs_slug})">-->
-                            <!--Jobs-->
-                        <!--</span> |-->
-            <!--<span ui-sref="academy.simple-text(-->
-                        <!--{slug: $ctrl.content.privacy_policy_slug})">-->
-                            <!--Impressum-->
-                        <!--</span> |-->
-            <!--<span ui-sref="academy.simple-text(-->
-                        <!--{slug: $ctrl.content.terms_and_conditions_slug})">-->
-                            <!--AGB-->
-                        <!--</span>-->
-          <!--</p>-->
+          <p class="copyright-links">
+                        <span ui-sref="academy.tickets" class="cup">
+                            Event Tickets
+                        </span> |
+            <span [routerLink]="['prices']"> Prices
+            </span>
+            <br>
+            <span ui-sref="academy.certificate" class="cup">
+                            Zertifikat Überprüfen
+                        </span> |
+
+            <span [routerLink]="['info', page.jobs_slug ]"> Jobs
+            </span> |
+            <span [routerLink]="['info', page.privacy_policy_slug ]"> Impressum
+            </span> |
+            <span [routerLink]="['info', page.terms_and_conditions_slug ]"> AGB
+            </span>
+          </p>
         </div>
         <div class="footer__right">
           <a class="contact-link" href="tel:{{ page.phone }}">

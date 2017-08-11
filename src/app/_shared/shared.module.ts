@@ -11,6 +11,7 @@ import { SharedService } from './services/shared.service';
 import { BaseRequestOptions, HttpModule, } from '@angular/http';
 import { TruncatePipe } from './pipes/truncate.pipe';
 import { LandingResolver } from './services/landing-resolver.service';
+import { SafeHtmlPipe } from './pipes/safe-html.pipe';
 
 @NgModule({
   imports: [
@@ -23,12 +24,14 @@ import { LandingResolver } from './services/landing-resolver.service';
     LoaderComponent,
     InfiniteScrollDirective,
     TruncatePipe,
+    SafeHtmlPipe
   ],
   exports: [
     ModalComponent,
     LoaderComponent,
     InfiniteScrollDirective,
-    TruncatePipe
+    TruncatePipe,
+    SafeHtmlPipe
   ],
   providers: [
     ApiService,

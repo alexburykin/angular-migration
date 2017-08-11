@@ -1,0 +1,129 @@
+// MUTUAL IN PRICES AND SUBSCRIPTION
+.payment-block
+  border-bottom: 0
+  &__nav
+    margin-bottom: 30px
+    label
+      font-weight: 400
+    input
+      display: inline-block
+      vertical-align: middle
+      margin: 0
+      margin-right: 5px
+  &__img
+    display: inline-block
+    vertical-align: middle
+    margin-right: 5px
+    img
+      width: 45px
+      height: auto
+  &__text
+    padding: 10px 0
+    display: inline-block
+    vertical-align: middle
+    font-family: $roboto
+    text-transform: uppercase
+    font-size: 16px
+    font-weight: 500
+    color: $twilight-blue
+
+.plan-wrap
+  font-size: 0
+  margin: 0 -10px
+  text-align: center
+
+.plan
+  border-radius: 2px
+  border: solid 1px #f0f0f0
+  background-color: #fff
+  width: calc(33.33% - 20px)
+  min-width: 275px
+  margin: 0 10px 10px
+  display: inline-block
+  vertical-align: top
+  transition: .5s all
+  &:hover,&.selected
+    box-shadow: 0 0 8px 0 rgba(0, 0, 0, 0.2)
+    .btn-blue-t
+      background-color: $sky-blue
+      color: #fff
+    .plan
+      &__head
+        background-color: $sky-blue
+        border-color: $sky-blue
+        outline: 1px solid $sky-blue
+        transition: .2s background, border
+      &__name,&__price,&__hint
+        transition: .5s all
+        color: #ffffff
+  &__head
+    padding: 18px 16px
+    min-height: 73px
+    border-bottom: solid 1px #f0f0f0
+    @extend %clearfix
+  &__name
+    float: left
+    font-size: 16px
+    font-weight: 500
+    color: $gray-dark
+  &__price
+    float: right
+    font-size: 14px
+    font-weight: 500
+    color: $sky-blue
+  &__body
+    font-size: 16px
+    padding: 20px 16px
+    text-align: left
+    min-height: 257px
+    ul li
+      padding-left: 22px
+      &:before
+        top: 6px
+  &__button
+    min-height: 72px
+    text-align: center
+    padding: 10px 16px 26px
+    .btn
+      width: 100%
+      transition: .5s all
+  &__hint
+    clear: both
+    font-size: 10px
+    padding-top: 10px
+    color: $warm-gray
+
+.reg-plan
+  font-weight: normal
+  width: calc(33% - 20px)
+  min-width: 275px
+  margin: 5px 10px
+  .plan
+    width: 100%
+    margin: 0
+    &__button
+      .btn
+      pointer-events: none
+      .btn-text
+        display: none
+  input
+    position: absolute
+    opacity: 0
+    visibility: hidden
+  input:checked+.plan
+    box-shadow: 0 0 2px 0 rgba(0,0,0, .2)
+    .btn-text
+      display: inline-block
+    .btn-blue-t
+      display: none
+    .plan
+      &__head
+        background-color: $sky-blue
+        outline: 1px solid $sky-blue
+        border-color: $sky-blue
+        transition: .2s background, border
+      &__name,&__price,&__hint
+        transition: .5s color
+        color: #ffffff
+
+
