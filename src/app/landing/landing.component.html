@@ -30,8 +30,8 @@
           <!--</div>-->
         <!--</li>-->
 
-        <li *ngIf="!user"><a ui-sref="db.login">EINLOGGEN</a></li>
-        <li *ngIf="!user"><a ui-sref="db.registration">REGISTRIEREN</a></li>
+        <li *ngIf="!user"><a onclick="window.openLink('/db/login')">EINLOGGEN</a></li>
+        <li *ngIf="!user"><a onclick="window.openLink('/db/registration')">REGISTRIEREN</a></li>
       </ul>
     </div>
   </div>
