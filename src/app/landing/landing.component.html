@@ -4,30 +4,32 @@
   <div class="top-line clearfix">
     <div class="right">
       <ul>
-        <!--<li class="search-wrap">-->
-          <!--<div ng-class="{'open' : isSearchOpen}" class="search-input">-->
-            <!--<input ng-keyup="$event.keyCode == 13 ? $ctrl.initSearch() : null"-->
-                   <!--ng-model="$ctrl.keyword"-->
-                   <!--class="c-input-white" type="text">-->
-            <!--<i ng-click="isSearchOpen = !isSearchOpen" class="icon icon-search-db-blue"></i>-->
-          <!--</div>-->
-        <!--</li>-->
+        <li class="search-wrap">
+          <div [ngClass]="{'open' : isSearchOpen}" class="search-input">
+            <input #search (keyup.enter)="onSearch(search.value)" class="c-input-white">
+            <div (click)="isSearchOpen = !isSearchOpen"
+                 [inlineSVG]="'../../assets/images/icons/dashboard/icon-search-blue.svg'"
+                 class="icon icon-search-nav"></div>
+          </div>
+        </li>
 
-        <!--<li ng-show="!isSearchOpen">-->
-          <!--<i ng-click="isSearchOpen = !isSearchOpen; $ctrl.keyword = ''" class="icon icon-search-db cup"></i>-->
-        <!--</li>-->
+        <li *ngIf="!isSearchOpen">
+          <div (click)="isSearchOpen = !isSearchOpen"
+               [inlineSVG]="'../../assets/images/icons/dashboard/icon-search-blue.svg'"
+               class="icon icon-search-nav icon-search-nav--white"></div>
+        </li>
 
         <!--<li ng-if="$ctrl.user" class="top-line-user">-->
-          <!--<div class="top-line-user__img img-fit">-->
-            <!--<img ng-src="{{ $ctrl.user.photo }}" alt="">-->
-          <!--</div>-->
-          <!--<div class="top-line-user__name">-->
-            <!--{{ $ctrl.user.first_name }} {{ $ctrl.user.last_name }}</div>-->
-          <!--<div class="top-line-user-drop">-->
-            <!--<p ui-sref="db.index">Dashboard</p>-->
-            <!--<p ui-sref="db.profile">Einstellungen</p>-->
-            <!--<p ng-click="$ctrl.logout()">Logout</p>-->
-          <!--</div>-->
+        <!--<div class="top-line-user__img img-fit">-->
+        <!--<img ng-src="{{ $ctrl.user.photo }}" alt="">-->
+        <!--</div>-->
+        <!--<div class="top-line-user__name">-->
+        <!--{{ $ctrl.user.first_name }} {{ $ctrl.user.last_name }}</div>-->
+        <!--<div class="top-line-user-drop">-->
+        <!--<p ui-sref="db.index">Dashboard</p>-->
+        <!--<p ui-sref="db.profile">Einstellungen</p>-->
+        <!--<p ng-click="$ctrl.logout()">Logout</p>-->
+        <!--</div>-->
         <!--</li>-->
 
         <li *ngIf="!user"><a onclick="window.openLink('/db/login')">EINLOGGEN</a></li>

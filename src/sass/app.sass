@@ -1,4 +1,16 @@
 /* You can add global styles to this file, and also import other style files */
+#pre-bootstrap
+  position: absolute
+  top: 30%
+  left: 50%
+  transform: translateX(-50%)
+  transition: .5s all
+  img
+    height: 40px
+#pre-bootstrap
+  &.loaded
+    opacity: 0
+
 
 @import "reset"
 @import "mixins"
@@ -6,6 +18,7 @@
 @import "overall"
 @import "buttons"
 @import "icons"
+@import "dashboard"
 @import "svg"
 @import "../assets/libs/slick/slick"
 // TODO: split into component

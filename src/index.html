@@ -13,7 +13,18 @@
   <script src="assets/libs/web-animations/web-animations-min@2.2.1.js"></script>
 </head>
 <body>
-  <app-root></app-root>
+
+
+<app-root></app-root>
+
+
+<div id="pre-bootstrap"><img src="assets/images/loader.gif"></div>
+<script type="text/javascript">
+  document.addEventListener( "appready", handleAppReady );
+  function handleAppReady() { var preBootstrap = document.getElementById( "pre-bootstrap" ); preBootstrap.className = "loaded"; setTimeout( function removeLoadingScreen() { preBootstrap.parentNode.removeChild( preBootstrap )}, 500); }
+</script>
+
+
 
 <script>
   window.openLink = function (segment) {

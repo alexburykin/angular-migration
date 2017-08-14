@@ -69,6 +69,19 @@
   width: 18px
   height: 17px
   background-image: url(../assets/images/icons/landing/icon-search.svg)
+
+.icon-search-nav
+  cursor: pointer
+  display: flex
+  align-items: center
+  &--white
+    svg *
+      stroke: #ffffff
+      transition: .5s all
+    &:hover
+      svg *
+        stroke: $sky-blue
+
 .icon-chat-topline
   width: 14px
   height: 16px

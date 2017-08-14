@@ -6,8 +6,7 @@ import { AppRoutingModule } from './app.routing';
 import { LandingModule } from './landing/landing.module';
 import { SharedModule } from './_shared/shared.module';
 import { DOMAIN } from '../config';
-// tslint:disable-next-line
-import 'rxjs';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [
@@ -15,6 +14,7 @@ import 'rxjs';
   ],
   imports: [
     BrowserModule,
+    BrowserAnimationsModule,
     SharedModule,
     LandingModule,
     AppRoutingModule

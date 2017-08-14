@@ -16,7 +16,6 @@ import { PricesComponent } from './footer/prices/prices.component';
 import { PricesResolver } from './footer/prices/prices-resolver.service';
 import { SlickModule } from 'ngx-slick';
 import { TeacherComponent } from './teachers/teacher/teacher.component';
-import { TeacherResolver } from './teachers/teacher/teacher-resolver.service';
 
 @NgModule({
   declarations: [
@@ -41,7 +40,6 @@ import { TeacherResolver } from './teachers/teacher/teacher-resolver.service';
   providers: [
     CommonTextResolver,
     PricesResolver,
-    TeacherResolver
   ]
 })
 export class LandingModule { }

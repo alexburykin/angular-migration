@@ -6,7 +6,13 @@ import { NavigationEnd, Router } from '@angular/router';
   template: '<router-outlet></router-outlet><app-modal></app-modal>',
 })
 export class AppComponent implements OnInit {
-  constructor(private router: Router) { }
+  constructor(
+    private router: Router,
+  ) {
+    const event = document.createEvent('Event');
+    event.initEvent('appready', true, true);
+    document.dispatchEvent(event);
+  }
 
   ngOnInit() {
     this.router.events.subscribe((evt) => {
