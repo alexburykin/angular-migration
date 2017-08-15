@@ -12,6 +12,7 @@ import { CommonTextResolver } from './footer/common-text/common-text-resolver.se
 import { PricesComponent } from './footer/prices/prices.component';
 import { PricesResolver } from './footer/prices/prices-resolver.service';
 import { TeacherComponent } from './teachers/teacher/teacher.component';
+import { TicketsComponent } from './tickets/tickets.component';
 
 const landingRoutes: Route[] = [
   {
@@ -28,6 +29,18 @@ const landingRoutes: Route[] = [
         path: 'events',
         component: EventsComponent,
         resolve: { page: LandingResolver },
+      },
+      {
+        path: 'tickets',
+        children: [
+          {
+            path: '',
+            component: TicketsComponent
+          },
+          {
+            path: '?code',
+            component: TicketsComponent
+          }]
       },
       {
         path: 'info/:slug',

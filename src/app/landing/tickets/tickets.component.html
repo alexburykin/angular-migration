@@ -1,0 +1,90 @@
+<div class="lp-tickets">
+  <div class="container">
+    <div *ngIf="!tickets && !loading" class="panel">
+      <h1>Seminartickets erneut zuschicken lassen</h1>
+      <h2>Bitte gib die Email ein mit der du dich für das Event registriert hast:</h2>
+      <div class="clearfix m-b-30 m-t-20">
+        <form [formGroup]="formModel" (ngSubmit)="submit(formModel.value)">
+          <div class="f-row f-row-2">
+            <div class="f-col">
+              <input formGroupName="email" class="c-input">
+            </div>
+            <div class="f-col">
+              <button class="btn btn-blue">ERNEUT ZUSCHICKEN</button>
+            </div>
+          </div>
+
+            <!--<div class="validation " ng-messages="ticketsForm.email.$error"-->
+                 <!--role="alert" ng-if="ticketsForm.email.$dirty">-->
+
+              <!--<span ng-message="required">Email is missed</span>-->
+              <!--<span ng-message="pattern">Please use correct email format</span>-->
+              <!--<span ng-message="minlength">Email is too short</span>-->
+
+            <!--</div>-->
+            <!--<input ng-model="$ctrl.email" type="text" name="email"-->
+                   <!--pattern="^(\S+)@([a-z0-9-]+)(\.)([a-z]{2,4})(\.?)([a-z]{0,4})+$"-->
+                   <!--placeholder="Email" class="c-input" required>-->
+          <!--</div>-->
+          <!--<div class="half right">-->
+            <!--<button type="submit" class="btn btn-blue">ERNEUT ZUSCHICKEN</button>-->
+          <!--</div>-->
+        </form>
+
+
+        <!--<form name="ticketsForm"
+              ng-submit="ticketsForm.$valid && $ctrl.sendTicketsLink()">
+          <div class="half left">
+
+            <div class="validation " ng-messages="ticketsForm.email.$error"
+                 role="alert" ng-if="ticketsForm.email.$dirty">
+
+              <span ng-message="required">Email is missed</span>
+              <span ng-message="pattern">Please use correct email format</span>
+              <span ng-message="minlength">Email is too short</span>
+
+            </div>
+            <input ng-model="$ctrl.email" type="text" name="email"
+                   pattern="^(\S+)@([a-z0-9-]+)(\.)([a-z]{2,4})(\.?)([a-z]{0,4})+$"
+                   placeholder="Email" class="c-input" required>
+          </div>
+          <div class="half right">
+            <button type="submit" class="btn btn-blue">ERNEUT ZUSCHICKEN</button>
+          </div>
+        </form>-->
+
+
+
+      </div>
+      <!--<div ng-if="$ctrl.errorMessage" class="lp-tickets__error">{{ $ctrl.errorMessage }}</div>-->
+    </div>
+
+    <div *ngIf="tickets && !loading" class="panel ticket-table-wrap">
+      <h1>Tickets</h1>
+      <table class="ticket-table">
+        <tr>
+          <th>Datum</th>
+          <th>Event</th>
+          <th>Registered Name</th>
+          <th>Ticket Type</th>
+          <th>Download</th>
+        </tr>
+        <tr *ngFor="let ticket of tickets">
+          <td>{{ ticket.date }}</td>
+          <td>{{ ticket.event_title }}</td>
+          <td>{{ ticket.name }}</td>
+          <td>{{ ticket.ticket_type | uppercase }}</td>
+          <td>
+            <a href="{{ ticket.download }}" target="_blank">
+              <div class="icon svg-download"
+                   [inlineSVG]="'../../../assets/images/icons/landing/icon-download.svg'"></div>
+            </a>
+          </td>
+        </tr>
+      </table>
+    </div>
+  </div>
+
+  <app-loader *ngIf="loading"></app-loader>
+</div>
+

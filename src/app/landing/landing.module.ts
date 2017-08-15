@@ -16,6 +16,8 @@ import { PricesComponent } from './footer/prices/prices.component';
 import { PricesResolver } from './footer/prices/prices-resolver.service';
 import { SlickModule } from 'ngx-slick';
 import { TeacherComponent } from './teachers/teacher/teacher.component';
+import { TicketsComponent } from './tickets/tickets.component';
+import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -27,10 +29,12 @@ import { TeacherComponent } from './teachers/teacher/teacher.component';
     EventListComponent,
     CommonTextComponent,
     PricesComponent,
-    TeacherComponent
+    TeacherComponent,
+    TicketsComponent
   ],
   imports: [
     CommonModule,
+    ReactiveFormsModule,
     SharedModule,
     Ng2PageScrollModule,
     InlineSVGModule,
