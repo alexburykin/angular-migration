@@ -17,7 +17,7 @@ import { PricesResolver } from './footer/prices/prices-resolver.service';
 import { SlickModule } from 'ngx-slick';
 import { TeacherComponent } from './teachers/teacher/teacher.component';
 import { TicketsComponent } from './tickets/tickets.component';
-import { ReactiveFormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -34,6 +34,7 @@ import { ReactiveFormsModule } from '@angular/forms';
   ],
   imports: [
     CommonModule,
+    FormsModule,
     ReactiveFormsModule,
     SharedModule,
     Ng2PageScrollModule,

@@ -4,59 +4,24 @@
       <h1>Seminartickets erneut zuschicken lassen</h1>
       <h2>Bitte gib die Email ein mit der du dich für das Event registriert hast:</h2>
       <div class="clearfix m-b-30 m-t-20">
-        <form [formGroup]="formModel" (ngSubmit)="submit(formModel.value)">
+        <form [formGroup]="form" #f="ngForm" (ngSubmit)="submit(form.value)">
           <div class="f-row f-row-2">
             <div class="f-col">
-              <input formGroupName="email" class="c-input">
+
+              <div *ngIf="form.get('email').dirty || f.submitted" class="validation">
+                <div *ngIf="form.get('email').hasError('required')">Email fehlt</div>
+                <div *ngIf="form.get('email').hasError('pattern')">Bitte überprüfe deine Email</div>
+              </div>
+
+              <input formControlName="email" class="c-input">
             </div>
             <div class="f-col">
-              <button class="btn btn-blue">ERNEUT ZUSCHICKEN</button>
+              <button class="btn btn-blue" [disabled]="form.invalid">ERNEUT ZUSCHICKEN</button>
             </div>
           </div>
-
-            <!--<div class="validation " ng-messages="ticketsForm.email.$error"-->
-                 <!--role="alert" ng-if="ticketsForm.email.$dirty">-->
-
-              <!--<span ng-message="required">Email is missed</span>-->
-              <!--<span ng-message="pattern">Please use correct email format</span>-->
-              <!--<span ng-message="minlength">Email is too short</span>-->
-
-            <!--</div>-->
-            <!--<input ng-model="$ctrl.email" type="text" name="email"-->
-                   <!--pattern="^(\S+)@([a-z0-9-]+)(\.)([a-z]{2,4})(\.?)([a-z]{0,4})+$"-->
-                   <!--placeholder="Email" class="c-input" required>-->
-          <!--</div>-->
-          <!--<div class="half right">-->
-            <!--<button type="submit" class="btn btn-blue">ERNEUT ZUSCHICKEN</button>-->
-          <!--</div>-->
         </form>
-
-
-        <!--<form name="ticketsForm"
-              ng-submit="ticketsForm.$valid && $ctrl.sendTicketsLink()">
-          <div class="half left">
-
-            <div class="validation " ng-messages="ticketsForm.email.$error"
-                 role="alert" ng-if="ticketsForm.email.$dirty">
-
-              <span ng-message="required">Email is missed</span>
-              <span ng-message="pattern">Please use correct email format</span>
-              <span ng-message="minlength">Email is too short</span>
-
-            </div>
-            <input ng-model="$ctrl.email" type="text" name="email"
-                   pattern="^(\S+)@([a-z0-9-]+)(\.)([a-z]{2,4})(\.?)([a-z]{0,4})+$"
-                   placeholder="Email" class="c-input" required>
-          </div>
-          <div class="half right">
-            <button type="submit" class="btn btn-blue">ERNEUT ZUSCHICKEN</button>
-          </div>
-        </form>-->
-
-
-
       </div>
-      <!--<div ng-if="$ctrl.errorMessage" class="lp-tickets__error">{{ $ctrl.errorMessage }}</div>-->
+      <div *ngIf="errMessage" class="lp-tickets__error">{{ errMessage }}</div>
     </div>
 
     <div *ngIf="tickets && !loading" class="panel ticket-table-wrap">

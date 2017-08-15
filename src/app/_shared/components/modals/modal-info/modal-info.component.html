@@ -1,0 +1,10 @@
+<div class="modal-dialog">
+  <div class="modal-dialog__inner">
+    <span (click)="close()" class="close">✕</span>
+
+    <p class="modal-dialog__title">{{ title }}</p>
+    <p class="modal-dialog__text">{{ text }}</p>
+
+  </div>
+</div>
+<div (click)="close()" class="black-overlay"></div>

@@ -12,6 +12,7 @@ import { BaseRequestOptions, HttpModule, } from '@angular/http';
 import { TruncatePipe } from './pipes/truncate.pipe';
 import { LandingResolver } from './services/landing-resolver.service';
 import { SafeHtmlPipe } from './pipes/safe-html.pipe';
+import { ModalInfoComponent } from './components/modals/modal-info/modal-info.component';
 
 @NgModule({
   imports: [
@@ -24,7 +25,8 @@ import { SafeHtmlPipe } from './pipes/safe-html.pipe';
     LoaderComponent,
     InfiniteScrollDirective,
     TruncatePipe,
-    SafeHtmlPipe
+    SafeHtmlPipe,
+    ModalInfoComponent
   ],
   exports: [
     ModalComponent,
@@ -42,6 +44,7 @@ import { SafeHtmlPipe } from './pipes/safe-html.pipe';
     LandingResolver
   ],
   entryComponents: [
+    ModalInfoComponent
   ]
 })
 export class SharedModule { }

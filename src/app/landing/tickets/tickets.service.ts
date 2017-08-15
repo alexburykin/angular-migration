@@ -11,4 +11,8 @@ export class TicketsService {
   public get(code: string) {
     return this._api.get(`/api/v1/core/landing/retrieve-tickets/${code}/`);
   }
+
+  public getLink(email: string) {
+    return this._api.post(`/api/v1/core/landing/retrieve-tickets-link/`, {email});
+  }
 }
