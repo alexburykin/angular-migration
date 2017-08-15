@@ -45,6 +45,7 @@ export class TicketsComponent implements OnInit {
 
     this._ticketsService.getLink(model.email).subscribe(res => {
       if (res.success) {
+        this.errMessage = '';
         this._modalService.open({
           component: ModalInfoComponent, context: {
             title: 'Danke!',

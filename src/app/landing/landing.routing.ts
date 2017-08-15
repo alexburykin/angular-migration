@@ -13,6 +13,8 @@ import { PricesComponent } from './footer/prices/prices.component';
 import { PricesResolver } from './footer/prices/prices-resolver.service';
 import { TeacherComponent } from './teachers/teacher/teacher.component';
 import { TicketsComponent } from './tickets/tickets.component';
+import { CourseComponent } from './courses/course/course.component';
+import { LectureComponent } from './courses/course/lecture/lecture.component';
 
 const landingRoutes: Route[] = [
   {
@@ -29,6 +31,14 @@ const landingRoutes: Route[] = [
         path: 'events',
         component: EventsComponent,
         resolve: { page: LandingResolver },
+      },
+      {
+        path: 'kurse/:slug',
+        component: CourseComponent
+      },
+      {
+        path: 'kurse/:slug/:lectureSlug',
+        component: LectureComponent
       },
       {
         path: 'tickets',

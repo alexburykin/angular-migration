@@ -1,0 +1,54 @@
+@import "../../../../../sass/variables"
+@import "../../../../../sass/mixins"
+
+.lecture
+  padding: 20px 0
+  h1
+    font-family: $roboto
+    font-size: 24px
+    font-weight: 600
+    color: $gray-dark
+    margin-bottom: 20px
+  h3
+    font-family: $roboto
+    font-size: 15px
+    font-weight: 600
+    color: $gray-dark
+    margin-bottom: 20px
+  .right
+    width: 35%
+  .left
+    width: 65%
+    padding-right: 20px
+  .panel
+    padding: 30px
+  &__text
+    font-family: $roboto
+    font-size: 14px
+    line-height: 1.6
+    text-align: justify
+    color: $gray-dark
+  &__teacher
+    margin-bottom: 20px
+    position: relative
+    p
+      position: absolute
+      width: 100%
+      bottom: 0
+      text-align: center
+      padding: 30px 0
+      background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.0), #000000)
+      font-family: $roboto
+      font-size: 18px
+      font-weight: 600
+      color: #ffffff
+  .books
+    &__item
+      width: calc(50% - 10px)
+      margin: 5px
+  @include bp-768
+    .right, .left
+      width: 100%
+      padding: 0
+    .panel
+      padding: 15px

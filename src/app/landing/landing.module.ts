@@ -18,6 +18,9 @@ import { SlickModule } from 'ngx-slick';
 import { TeacherComponent } from './teachers/teacher/teacher.component';
 import { TicketsComponent } from './tickets/tickets.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { CourseComponent } from './courses/course/course.component';
+import { LectureComponent } from './courses/course/lecture/lecture.component';
+import { CoursesService } from './courses/courses.service';
 
 @NgModule({
   declarations: [
@@ -30,7 +33,9 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     CommonTextComponent,
     PricesComponent,
     TeacherComponent,
-    TicketsComponent
+    TicketsComponent,
+    CourseComponent,
+    LectureComponent
   ],
   imports: [
     CommonModule,
@@ -45,6 +50,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
   providers: [
     CommonTextResolver,
     PricesResolver,
+    CoursesService
   ]
 })
 export class LandingModule { }

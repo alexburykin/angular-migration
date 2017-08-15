@@ -22,12 +22,12 @@ export class TeachersComponent implements OnInit {
   }
 
   slickNext() {
-    const ele = <HTMLElement>document.querySelector('.home-slider .slick-next');
+    const ele = <HTMLElement>document.querySelector('.teachers-slider .slick-next');
     ele.click();
   }
 
   slickPrev() {
-    const ele = <HTMLElement>document.querySelector('.home-slider .slick-prev');
+    const ele = <HTMLElement>document.querySelector('.teachers-slider .slick-prev');
     ele.click();
   }
 
