@@ -21,6 +21,8 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { CourseComponent } from './courses/course/course.component';
 import { LectureComponent } from './courses/course/lecture/lecture.component';
 import { CoursesService } from './courses/courses.service';
+import { EventComponent } from './events/event/event.component';
+import { EventsService } from './events/events.service';
 
 @NgModule({
   declarations: [
@@ -35,7 +37,8 @@ import { CoursesService } from './courses/courses.service';
     TeacherComponent,
     TicketsComponent,
     CourseComponent,
-    LectureComponent
+    LectureComponent,
+    EventComponent
   ],
   imports: [
     CommonModule,
@@ -50,7 +53,8 @@ import { CoursesService } from './courses/courses.service';
   providers: [
     CommonTextResolver,
     PricesResolver,
-    CoursesService
+    CoursesService,
+    EventsService
   ]
 })
 export class LandingModule { }

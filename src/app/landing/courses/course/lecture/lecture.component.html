@@ -1,4 +1,3 @@
-<!--suppress CssUnknownTarget -->
 <div class="lecture">
   <div *ngIf="lecture" class="container">
     <div class="left">
@@ -23,6 +22,8 @@
         <!--</div>-->
         <!--</div>-->
       </div>
+
+      <!-- TODO: form for registration in course -->
       <!--<div ng-if="!$ctrl.user" class="course-get-started">-->
         <!--<h2>Heute loslegen!</h2>-->
 
@@ -170,6 +171,6 @@
     </div>
   </div>
 
-  <app-loader *ngIf="lecture"></app-loader>
+  <app-loader *ngIf="!lecture"></app-loader>
 </div>
 

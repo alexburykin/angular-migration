@@ -20,7 +20,7 @@
           <p class="panel__title">{{ event.title }}</p>
           <p class="panel__subtitle">{{ event.short_description | truncate: 70}}</p>
         </div>
-        <button class="btn btn-text btn-text-min">MEHR DAZU</button>
+        <button [routerLink]="['/events', event.id]" class="btn btn-text btn-text-min">MEHR DAZU</button>
       </div>
     </div>
   </div>

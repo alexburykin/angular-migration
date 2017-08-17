@@ -15,6 +15,7 @@ import { TeacherComponent } from './teachers/teacher/teacher.component';
 import { TicketsComponent } from './tickets/tickets.component';
 import { CourseComponent } from './courses/course/course.component';
 import { LectureComponent } from './courses/course/lecture/lecture.component';
+import { EventComponent } from './events/event/event.component';
 
 const landingRoutes: Route[] = [
   {
@@ -29,8 +30,17 @@ const landingRoutes: Route[] = [
       },
       {
         path: 'events',
-        component: EventsComponent,
-        resolve: { page: LandingResolver },
+        children: [
+          {
+            path: '',
+            component: EventsComponent,
+            resolve: { page: LandingResolver },
+          },
+          {
+            path: ':id',
+            component: EventComponent
+          }
+        ]
       },
       {
         path: 'kurse/:slug',

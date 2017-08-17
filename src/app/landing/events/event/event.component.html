@@ -1,0 +1,81 @@
+<!--&lt;!&ndash;suppress CssUnknownTarget &ndash;&gt;-->
+<!--<div class="lp-event">-->
+
+  <!--<div ng-if="$ctrl.event" class="container">-->
+
+    <!--<div class="left">-->
+      <!--<div class="panel">-->
+        <!--<h1 class="title">Event</h1>-->
+        <!--<p ng-bind-html="$ctrl.event.description" class="safe-html"></p>-->
+        <!--<p ng-bind-html="$ctrl.event.details" class="safe-html"></p>-->
+      <!--</div>-->
+    <!--</div>-->
+
+    <!--<div class="right">-->
+      <!--<div class="panel">-->
+        <!--<h3 class="title"> {{ $ctrl.event.title }} </h3>-->
+        <!--<h3 class="title"> {{ $ctrl.event.date }} </h3>-->
+        <!--<p class="lp-event__location">-->
+          <!--<svg src="img/icons/dashboard/icon-location.svg" class="icon"></svg>-->
+          <!--{{ $ctrl.event.place }}-->
+        <!--</p>-->
+        <!--<div class="lp-event__img">-->
+          <!--<img ng-src="{{ $ctrl.event.detail_image }}" alt="event-image" class="img-responsive">-->
+        <!--</div>-->
+        <!--<map style="height: 220px"-->
+             <!--ng-if="$ctrl.event.coordinates.longitude && $ctrl.event.coordinates.latitude"-->
+             <!--center="-->
+                <!--['{{$ctrl.event.coordinates.longitude}}',-->
+                 <!--'{{$ctrl.event.coordinates.latitude}}']">-->
+          <!--<marker position="-->
+                <!--['{{$ctrl.event.coordinates.longitude}}',-->
+                 <!--'{{$ctrl.event.coordinates.latitude}}']" on-click="myfunc()"></marker>-->
+        <!--</map>-->
+      <!--</div>-->
+    <!--</div>-->
+
+    <!--<div class="right" ng-if="$ctrl.event.tickets.length">-->
+      <!--<div class="panel lp-event-sharing">-->
+        <!--<h2 class="title">Teilen:</h2>-->
+        <!--<div class="sharing">-->
+          <!--<div ng-click="$ctrl.sharePost('fb')" class="sharing__icon share-fb">-->
+            <!--<svg src="img/icons/sharing/icon-facebook.svg"></svg>-->
+          <!--</div>-->
+          <!--<div ng-click="$ctrl.sharePost('tw')" class="sharing__icon share-tw">-->
+            <!--<svg src="img/icons/sharing/icon-twitter.svg"></svg>-->
+          <!--</div>-->
+          <!--<div ng-click="$ctrl.sharePost('gp')" class="sharing__icon share-gp">-->
+            <!--<svg src="img/icons/sharing/icon-google.svg"></svg>-->
+          <!--</div>-->
+        <!--</div>-->
+      <!--</div>-->
+    <!--</div>-->
+
+    <!--<div class="left" ng-if="$ctrl.event.tickets.length">-->
+      <!--<div class="panel">-->
+        <!--<h2 class="title">Tickets:</h2>-->
+        <!--<div ng-repeat="ticket in $ctrl.event.tickets"-->
+             <!--ng-click="$ctrl.openTicket(ticket.id)"-->
+             <!--class="panel ticket-card">-->
+          <!--<div class="ticket-card__left">-->
+            <!--<div class="ticket-card__name">{{ ticket.type }}</div>-->
+            <!--<div class="ticket-card__price">-->
+              <!--{{ ticket.price }}-->
+              <!--<span>{{ ticket.currency }}</span>-->
+            <!--</div>-->
+          <!--</div>-->
+          <!--<div class="ticket-card__right">-->
+            <!--<div ng-bind-html="ticket.features" class="safe-html"></div>-->
+          <!--</div>-->
+        <!--</div>-->
+      <!--</div>-->
+    <!--</div>-->
+
+
+
+  <!--</div>-->
+
+  <!--<div ng-if="!$ctrl.event" class="loader-gif">-->
+    <!--<img ng-src="img/loader.gif" alt="">-->
+  <!--</div>-->
+<!--</div>-->
