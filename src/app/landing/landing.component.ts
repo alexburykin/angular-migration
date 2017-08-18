@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { SharedService } from '../_shared/services/shared.service';
+import { ActivatedRoute, Router } from '@angular/router';
 
 @Component({
   selector: 'app-landing',
@@ -11,7 +12,8 @@ export class LandingComponent implements OnInit {
   public page: any;
 
   constructor(
-    private _sharedService: SharedService
+    private _router: Router,
+    private _sharedService: SharedService,
   ) { }
 
   ngOnInit() {
