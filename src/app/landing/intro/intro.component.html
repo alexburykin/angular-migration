@@ -1,8 +1,8 @@
-<div *ngIf="page" id="about"
+<div id="about"
      [ngStyle]="{'background-image': 'url('+ page.header_image +')'}"
      class="get-started an-fade-in">
-  <div ng-if="!$ctrl.user" class="get-started__inner">
-    <p class="get-started__title">NOCH HEUTE LOSLEGEN!</p>
+  <!--<div ng-if="!$ctrl.user" class="get-started__inner">-->
+    <!--<p class="get-started__title">NOCH HEUTE LOSLEGEN!</p>-->
     <!--<form name="getStartedForm"-->
           <!--ng-submit="getStartedForm.$valid && $ctrl.submitShortSignup()"-->
           <!--class="get-started__form" novalidate>-->
@@ -148,29 +148,31 @@
         <!--<button ng-disabled="!isTermsChecked" type="submit" class="btn btn-blue">JETZT MITGLIED WERDEN</button>-->
       <!--</div>-->
     <!--</form>-->
-  </div>
+  <!--</div>-->
   <!--<div class="get-started__partner">-->
   <!--<img class="img-responsive" src="img/content/partner.jpg" alt="">-->
   <!--</div>-->
 </div>
 
-<div *ngIf="page" class="home-info an-slide-in-bot">
-  <div class="container">
-    <p class="home-info__title">{{ page.header_title }}</p>
-    <p [innerHTML]="page.header_text" class="safe-html home-info__text"></p>
-    <!--<div class="text-right">-->
-    <!--<button ng-click="$ctrl.showSignupModal()" class="btn btn-blue-t">MEHR ERFAHREN</button>-->
-    <!--</div>-->
-  </div>
-</div>
+<!--<div class="home-info an-slide-in-bot">-->
+  <!--<div class="container">-->
+    <!--<p class="home-info__title">{{ page.header_title }}</p>-->
+    <!--<p [innerHTML]="page.header_text" class="safe-html home-info__text"></p>-->
+    <!--&lt;!&ndash;<div class="text-right">&ndash;&gt;-->
+    <!--&lt;!&ndash;<button ng-click="$ctrl.showSignupModal()" class="btn btn-blue-t">MEHR ERFAHREN</button>&ndash;&gt;-->
+    <!--&lt;!&ndash;</div>&ndash;&gt;-->
+  <!--</div>-->
+<!--</div>-->
 
-<app-courses [page]="page"></app-courses>
-<app-teachers [page]="page"></app-teachers>
+<!--<app-courses [page]="page"></app-courses>-->
+<!--<app-teachers [page]="page"></app-teachers>-->
 
-<div class="start-study">
-  <p class="start-study__title">MITGLIED WERDEN BEI DER ACADEMY UND VOM NETZWERK PROFITIEREN</p>
-  <p class="start-study__subtitle"><span>Als Mitglied der Investment Punk Academy stehen Dir alle Tore in die finanzielle Freiheit offen. Das vermittelte Wissen kann direkt angewendet werden. Zusätzlich steht Gerald Hörhan persönlich alle 14 Tage im Live-Chat für Fragen zu wirtschaftlichen Themen zur Verfügung. Die große Community der Academy bietet zusätzlich die Möglichkeit, sich mit anderen Mitgliedern und Gleichgesinnten auszutauschen und zu vernetzen. </span></p>
-  <button ng-click="$ctrl.showSignupModal()" class="btn btn-blue">JETZT MITGLIED WERDEN</button>
-</div>
+<!--<div class="start-study">-->
+  <!--<p class="start-study__title">MITGLIED WERDEN BEI DER ACADEMY UND VOM NETZWERK PROFITIEREN</p>-->
+  <!--<p class="start-study__subtitle"><span>Als Mitglied der Investment Punk Academy stehen Dir alle Tore in die finanzielle Freiheit offen. Das vermittelte Wissen kann direkt angewendet werden. Zusätzlich steht Gerald Hörhan persönlich alle 14 Tage im Live-Chat für Fragen zu wirtschaftlichen Themen zur Verfügung. Die große Community der Academy bietet zusätzlich die Möglichkeit, sich mit anderen Mitgliedern und Gleichgesinnten auszutauschen und zu vernetzen. </span></p>-->
+  <!--<button ng-click="$ctrl.showSignupModal()" class="btn btn-blue">JETZT MITGLIED WERDEN</button>-->
+<!--</div>-->
 
-<app-event-list [page]="page"></app-event-list>
+<!--<app-event-list [page]="page"></app-event-list>-->
+
+

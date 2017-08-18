@@ -6,7 +6,6 @@ import { Route, RouterModule } from '@angular/router';
 import { LandingComponent } from './landing.component';
 import { IntroComponent } from './intro/intro.component';
 import { EventsComponent } from './events/events.component';
-import { LandingResolver } from '../_shared/services/landing-resolver.service';
 import { CommonTextComponent } from './footer/common-text/common-text.component';
 import { CommonTextResolver } from './footer/common-text/common-text-resolver.service';
 import { PricesComponent } from './footer/prices/prices.component';
@@ -21,26 +20,18 @@ const landingRoutes: Route[] = [
   {
     path: '',
     component: LandingComponent,
-    resolve: { page: LandingResolver },
     children: [
       {
         path: '',
         component: IntroComponent,
-        resolve: { page: LandingResolver },
       },
       {
         path: 'events',
-        children: [
-          {
-            path: '',
-            component: EventsComponent,
-            resolve: { page: LandingResolver },
-          },
-          {
-            path: ':id',
-            component: EventComponent
-          }
-        ]
+        component: EventsComponent,
+      },
+      {
+        path: 'events/:id',
+        component: EventComponent
       },
       {
         path: 'kurse/:slug',
@@ -75,7 +66,7 @@ const landingRoutes: Route[] = [
         path: 'prices',
         component: PricesComponent,
         resolve: { memberships: PricesResolver },
-      }
+      },
     ]
   }
 ];

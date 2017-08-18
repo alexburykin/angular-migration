@@ -1,5 +1,5 @@
-import { Component, Input, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { Component, OnInit } from '@angular/core';
+import { SharedService } from '../../_shared/services/shared.service';
 
 @Component({
   selector: 'app-events',
@@ -11,11 +11,11 @@ export class EventsComponent implements OnInit {
   public page: any;
 
   constructor(
-    private _activatedRoute: ActivatedRoute
+    private _sharedService: SharedService
   ) { }
 
   ngOnInit() {
-    this._activatedRoute.data.subscribe( data => this.page  = data.page );
+    this._sharedService.getLandingPage().subscribe( page => { this.page  = page; });
   }
 
 }

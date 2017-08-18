@@ -10,7 +10,6 @@ import { ModalService } from './components/modal/modal.service';
 import { SharedService } from './services/shared.service';
 import { BaseRequestOptions, HttpModule, } from '@angular/http';
 import { TruncatePipe } from './pipes/truncate.pipe';
-import { LandingResolver } from './services/landing-resolver.service';
 import { SafeHtmlPipe } from './pipes/safe-html.pipe';
 import { ModalInfoComponent } from './components/modals/modal-info/modal-info.component';
 
@@ -41,7 +40,6 @@ import { ModalInfoComponent } from './components/modals/modal-info/modal-info.co
     ModalService,
     SharedService,
     BaseRequestOptions,
-    LandingResolver
   ],
   entryComponents: [
     ModalInfoComponent

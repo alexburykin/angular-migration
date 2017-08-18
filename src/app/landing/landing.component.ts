@@ -1,23 +1,21 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
-import { animateFactory } from 'ng2-animate';
+import { SharedService } from '../_shared/services/shared.service';
 
 @Component({
   selector: 'app-landing',
   templateUrl: './landing.component.html',
   styleUrls: ['./landing.component.sass'],
-  animations: [animateFactory(500, 0, 'ease-in')],
 })
 export class LandingComponent implements OnInit {
 
   public page: any;
 
   constructor(
-    private _activatedRoute: ActivatedRoute
+    private _sharedService: SharedService
   ) { }
 
   ngOnInit() {
-    this._activatedRoute.data.subscribe( data => this.page  = data.page );
+    this._sharedService.getLandingPage().subscribe( page => { this.page  = page; });
   }
 
   onSearch(keyword: string) {

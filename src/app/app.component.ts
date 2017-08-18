@@ -12,9 +12,9 @@ export class AppComponent implements OnInit {
     private router: Router,
     private _authService: AuthService
   ) {
-    const event = document.createEvent('Event');
-    event.initEvent('appready', true, true);
-    document.dispatchEvent(event);
+    // const event = document.createEvent('Event');
+    // event.initEvent('appready', true, true);
+    // document.dispatchEvent(event);
   }
 
   ngOnInit() {
@@ -23,7 +23,7 @@ export class AppComponent implements OnInit {
       window.scrollTo(0, 0);
     });
 
-    this._authService.setUser();
+    // this._authService.setUser();
   }
 }
 

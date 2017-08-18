@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { TeacherService } from './teacher.service';
-import { animateFactory } from 'ng2-animate';
 
 
 @Component({
@@ -9,7 +8,6 @@ import { animateFactory } from 'ng2-animate';
   templateUrl: './teacher.component.html',
   styleUrls: ['./teacher.component.sass'],
   providers: [ TeacherService ],
-  animations: [animateFactory(500, 0, 'ease-in')]
 })
 export class TeacherComponent implements OnInit {
 
