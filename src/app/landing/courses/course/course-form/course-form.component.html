@@ -1,0 +1,160 @@
+
+<!-- TODO: update this form, when design will be ready-->
+<div *ngIf="user" class="course-get-started">
+
+  <h2>Heute loslegen!</h2>
+
+  <form [formGroup]="form" #f="ngForm" (ngSubmit)="submit(form.value)">
+
+    <div class="f-row">
+      <div class="f-col">
+
+        <div class="validation" *ngIf="form.get('first_name').dirty || f.submitted">
+          <div *ngIf="form.get('first_name').hasError('required')">Vorname fehlt</div>
+          <div *ngIf="form.get('first_name').hasError('minlength')">Vorname ist zu kurz</div>
+        </div>
+        <input placeholder="Vorname" formControlName="first_name" class="c-input">
+
+      </div>
+    </div>
+
+    <div class="f-row">
+      <div class="f-col">
+
+        <div class="validation" *ngIf="form.get('last_name').dirty || f.submitted">
+          <div *ngIf="form.get('last_name').hasError('required')">Vorname fehlt</div>
+          <div *ngIf="form.get('last_name').hasError('minlength')">Vorname ist zu kurz</div>
+        </div>
+        <input placeholder="Nachname" formControlName="last_name" class="c-input">
+
+      </div>
+    </div>
+
+    <div class="f-row">
+      <div class="f-col">
+
+        <div class="validation" *ngIf="form.get('country').dirty || f.submitted">
+          <div *ngIf="form.get('country').hasError('required')">Land fehlt</div>
+        </div>
+
+        <div class="c-select c-input">
+          <select formControlName="country">
+            <option value="">Land</option>
+            <option *ngFor="let c of countries" >{{c}}</option>
+          </select>
+        </div>
+
+      </div>
+    </div>
+
+    <div class="f-row">
+      <div class="f-col">
+
+        <div class="validation" *ngIf="form.get('city').dirty || f.submitted">
+          <div *ngIf="form.get('city').hasError('required')">Stadt fehlt</div>
+        </div>
+        <input placeholder="Stadt" formControlName="city" class="c-input">
+
+      </div>
+    </div>
+
+    <div class="f-row">
+      <div class="f-col">
+        <div class="validation" *ngIf="form.get('address').dirty || f.submitted">
+          <div *ngIf="form.get('address').hasError('required')">Adresse fehlt</div>
+        </div>
+        <input placeholder="Adresse" formControlName="address" class="c-input">
+      </div>
+    </div>
+
+
+    <div class="f-row">
+      <div class="f-col">
+
+        <div class="validation" *ngIf="form.get('email').dirty || f.submitted">
+          <div *ngIf="form.get('email').hasError('required')" >Email fehlt</div>
+          <div *ngIf="form.get('email').hasError('pattern')" >Bitte überprüfe deine Email</div>
+          <div *ngIf="form.get('email').hasError('unique')" >Deine Email ist schonmal verwendet worden</div>
+        </div>
+        <input placeholder="Email" formControlName="email" class="c-input">
+
+      </div>
+    </div>
+
+    <div class="f-row">
+      <div class="f-col">
+
+        <div class="validation" *ngIf="form.get('password').dirty || f.submitted">
+
+          <div *ngIf="form.get('password').hasError('required')" >Passwort fehlt</div>
+          <div *ngIf="form.get('password').hasError('minlength')" >Passwort ist zu kurz</div>
+          <div *ngIf="form.get('password').hasError('pattern')" >Das Passwort darf keine Leerzeichen enthalten</div>
+        </div>
+        <input placeholder="Passwort" formControlName="password" class="c-input">
+
+      </div>
+    </div>
+
+    <div class="f-row">
+      <div class="f-col">
+        <label class="c-radio">
+          <input value="0" formControlName="is_company" name="is_company" type="radio">
+          <span> Privates Konto </span>
+        </label>
+      </div>
+    </div>
+    <div class="f-row">
+      <div class="f-col">
+        <label class="c-radio">
+          <input value="1" formControlName="is_company" name="is_company" type="radio">
+          <span> Firmen Konto </span>
+        </label>
+      </div>
+    </div>
+
+    <div *ngIf="form.value.is_company == '1'" class="an-slide-in-bot m-t-15">
+
+      <div class="f-row">
+        <div class="f-col">
+          <div class="validation" *ngIf="form.get('company').dirty || f.submitted">
+            <div *ngIf="form.get('company').hasError('required')">Firma fehlt</div>
+          </div>
+          <input placeholder="Firma" formControlName="company" class="c-input">
+        </div>
+      </div>
+
+      <div class="f-row">
+        <div class="f-col">
+          <div class="validation" *ngIf="form.get('tax_id').dirty || f.submitted">
+            <div *ngIf="form.get('tax_id').hasError('required')">Steuernummer fehlt</div>
+          </div>
+          <input placeholder="Steuernummer" formControlName="tax_id" class="c-input">
+        </div>
+      </div>
+
+      <div class="f-row">
+        <div class="f-col">
+          <div class="validation" *ngIf="form.get('zip_code').dirty || f.submitted">
+            <div *ngIf="form.get('zip_code').hasError('required')">Postleitzahl fehlt</div>
+          </div>
+          <input placeholder="Postleitzahl" formControlName="zip_code" class="c-input">
+        </div>
+      </div>
+
+    </div>
+
+    <div class="f-row">
+      <div class="f-col">
+        <label class="text-left">
+          <input type="checkbox" required>  Ich erkläre mich mit den
+          <a href="https://investmentpunk.academy/info/agb/" target="_blank">AGB`s</a> einverstanden.
+        </label>
+      </div>
+    </div>
+
+    <button class="btn btn-blue">JETZT MITGLIED WERDEN</button>
+
+  </form>
+
+
+</div>

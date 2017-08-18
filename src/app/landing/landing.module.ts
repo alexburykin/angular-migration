@@ -23,6 +23,7 @@ import { LectureComponent } from './courses/course/lecture/lecture.component';
 import { CoursesService } from './courses/courses.service';
 import { EventComponent } from './events/event/event.component';
 import { EventsService } from './events/events.service';
+import { CourseFormComponent } from './courses/course/course-form/course-form.component';
 
 @NgModule({
   declarations: [
@@ -38,7 +39,8 @@ import { EventsService } from './events/events.service';
     TicketsComponent,
     CourseComponent,
     LectureComponent,
-    EventComponent
+    EventComponent,
+    CourseFormComponent
   ],
   imports: [
     CommonModule,

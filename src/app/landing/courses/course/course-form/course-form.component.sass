@@ -1,0 +1,33 @@
+@import "../../../../../sass/variables"
+@import "../../../../../sass/mixins"
+
+.course-get-started
+  background-color: rgba(0, 81, 206, 0.92)
+  margin-top: 20px
+  border-radius: 2px
+  padding: 25px 30px
+  h2
+    color: #fff
+    margin: 10px 0 20px
+  .c-radio
+    span
+      color: #ffffff
+      &:before
+        border-color: #ffffff
+  .c-input
+    color: #fff
+    margin-bottom: 5px
+    text-align: left
+    border-color: #fff
+    +placeholder
+      color: #fff
+      opacity: .5
+  .c-input.c-select
+    select
+      color: #fff
+    select.ng-invalid
+      color: #fff
+      opacity: .5
+  .btn
+    margin-top: 15px
+

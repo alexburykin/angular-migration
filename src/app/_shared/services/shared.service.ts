@@ -9,4 +9,8 @@ export class SharedService {
     private _api: ApiService,
   ) {}
 
+  public getCountries(): Observable<any> {
+    return this._api.get('/api/v1/accounts/get-country/');
+  }
+
 }
