@@ -9,6 +9,8 @@ import { EventsService } from '../events.service';
 })
 export class EventComponent implements OnInit {
 
+  public event: any;
+
   constructor(
     private _activatedRoute: ActivatedRoute,
     private _eventsService: EventsService
@@ -16,8 +18,12 @@ export class EventComponent implements OnInit {
 
   ngOnInit() {
     this._activatedRoute.params.subscribe( params => {
-      this._eventsService.getEvent(params.id).subscribe( res => console.log(res));
+      this._eventsService.getEvent(params.id).subscribe( event => this.event = event);
     });
+  }
+
+  public openTicket(id: number) {
+    console.log(id);
   }
 
 //  TODO: sharing functionality, map, switch user functionality

@@ -1,109 +1,112 @@
-//.lp-event
-//  padding: 20px 0
-//  .panel
-//    padding: 30px
-//  .ticket-card
-//    padding: 0
-//  .left
-//    width: 65%
-//    padding-right: 20px
-//  .right
-//    width: 35%
-//  .title
-//    margin-bottom: 20px
-//  &__img
-//    margin-bottom: 20px
-//  &__location
-//    margin-bottom: 20px
-//    font-family: $roboto
-//    font-size: 13px
-//    line-height: 1.38
-//    svg
-//      margin-right: 6px
-//      *
-//        fill: $sky-blue
-//        stroke: $sky-blue
-//  h3
-//    font-size: 15px
-//  h2
-//    font-size: 18px
-//  h1
-//    font-size: 24px
-//  @include bp-768
-//    .right,.left
-//      width: 100%
-//      padding: 0
-//    .panel
-//      padding: 15px
-//
-//.lp-event-sharing
-//  .title,
-//  .sharing
-//    display: inline-block
-//    vertical-align: middle
-//    margin-bottom: 0
-//  .sharing
-//    margin-left: 20px
-//    &__icon
-//      padding-top: 11px
-//      width: 38px
-//      height: 38px
-//      &:hover
-//        box-shadow: 0 0 8px 0 rgba(0, 0, 0, 0.2)
-//      svg
-//        max-height: 20px
-//
-//
-//.ticket-card
-//  @extend %clearfix
-//  padding: 0!important
-//  position: relative
-//  &__left
-//    width: 140px
-//    height: 100%
-//    float: left
-//    padding: 30px 0
-//    position: absolute
-//    text-align: center
-//    background-color: #fff
-//    background-color: rgba(0, 81, 206, 0.92)
-//  &__name
-//    font-family: $roboto
-//    font-size: 14px
-//    font-weight: 600
-//    color: #ffffff
-//    margin-bottom: 10px
-//  &__price
-//    height: 50px
-//    font-family: $roboto
-//    font-size: 40px
-//    line-height: 1.25
-//    color: #ffffff
-//    span
-//      font-family: $roboto
-//      font-size: 18px
-//      font-weight: 600
-//      color: #ffffff
-//      vertical-align: top
-//      display: inline-block
-//      margin-top: 6px
-//  &__right
-//    float: right
-//    width: calc(100% - 140px)
-//    padding: 20px
-//    .safe-html
-//      font-size: 13px
-//      line-height: 1.1
-//      p
-//        margin-bottom: 0
-//  &:hover
-//    .ticket-card__left
-//      transition: .5s all
-//      background-color: $sky-blue
-//    cursor: pointer
-//    box-shadow: 0 0 8px 0 rgba(0, 0, 0, 0.4)
-//  @include bp-460
-//    &__left,
-//    &__right
-//      width: 100%
-//      position: initial
+@import "../../../../sass/variables"
+@import "../../../../sass/mixins"
+
+.lp-event
+  padding: 20px 0
+  .panel
+    padding: 30px
+  .ticket-card
+    padding: 0
+  .left
+    width: 65%
+    padding-right: 20px
+  .right
+    width: 35%
+  .title
+    margin-bottom: 20px
+  &__img
+    margin-bottom: 20px
+  &__location
+    margin-bottom: 20px
+    font-family: $roboto
+    font-size: 13px
+    line-height: 1.38
+    svg
+      margin-right: 6px
+      *
+        fill: $sky-blue
+        stroke: $sky-blue
+  h3
+    font-size: 15px
+  h2
+    font-size: 18px
+  h1
+    font-size: 24px
+  @include bp-768
+    .right,.left
+      width: 100%
+      padding: 0
+    .panel
+      padding: 15px
+
+.lp-event-sharing
+  .title,
+  .sharing
+    display: inline-block
+    vertical-align: middle
+    margin-bottom: 0
+  .sharing
+    margin-left: 20px
+    &__icon
+      padding-top: 11px
+      width: 38px
+      height: 38px
+      &:hover
+        box-shadow: 0 0 8px 0 rgba(0, 0, 0, 0.2)
+      svg
+        max-height: 20px
+
+
+.ticket-card
+  @extend %clearfix
+  padding: 0!important
+  position: relative
+  &__left
+    width: 140px
+    height: 100%
+    float: left
+    padding: 30px 0
+    position: absolute
+    text-align: center
+    background-color: #fff
+    background-color: rgba(0, 81, 206, 0.92)
+  &__name
+    font-family: $roboto
+    font-size: 14px
+    font-weight: 600
+    color: #ffffff
+    margin-bottom: 10px
+  &__price
+    height: 50px
+    font-family: $roboto
+    font-size: 40px
+    line-height: 1.25
+    color: #ffffff
+    span
+      font-family: $roboto
+      font-size: 18px
+      font-weight: 600
+      color: #ffffff
+      vertical-align: top
+      display: inline-block
+      margin-top: 6px
+  &__right
+    float: right
+    width: calc(100% - 140px)
+    padding: 20px
+    .safe-html
+      font-size: 13px
+      line-height: 1.1
+      p
+        margin-bottom: 0
+  &:hover
+    .ticket-card__left
+      transition: .5s all
+      background-color: $sky-blue
+    cursor: pointer
+    box-shadow: 0 0 8px 0 rgba(0, 0, 0, 0.4)
+  @include bp-460
+    &__left,
+    &__right
+      width: 100%
+      position: initial
